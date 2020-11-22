@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>One Time Password</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+    @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+    body {
+      font-family: "Lato", sans-serif;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .content {
+      margin: auto;
+      width: 100%;
+    }
+
+    .container {
+      width: 38%;
+      margin: auto;
+    }
+
+    body div.title h1 {
+      color: #f14f78;
+      text-align: center;
+    }
+
+    div.logoplace {
+      background-color: black;
+      padding: 25px 0px 50px 0px;
+      text-align: center;
+    }
+
+    div.logoplace img {
+      margin: auto;
+    }
+
+    div.titlebg {
+      font-family: "Playfair Display", serif;
+      height: 100%;
+      /* width: 100%; */
+      max-width: 100%;
+      background: url("Group308.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    div.titlebg h1 {
+      margin-left: 70px;
+      font-weight: bold;
+      font-size: 80px;
+    }
+
+    div.titlebg h1 span {
+      font-size: 50px;
+    }
+
+    div.title {
+      display: inline-block;
+      /* background-color: pink; */
+      text-align: center;
+    }
+
+    footer {
+      background-color: #f14f78;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      color: white;
+      text-align: center;
+    }
+
+    footer div a.social {
+      margin: 10px;
+    }
+
+    div.tempass {
+      margin: 40px 10px;
+      width: 200px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    div.tempass p {
+      margin: 0;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    form.reset input {
+      margin: 10px;
+      color: white;
+      font-size: 21px;
+      background: black;
+      outline: none;
+      border: none;
+      padding: 10px 60px;
+      border-radius: 30px;
+    }
+
+    form.reset input:hover {
+      background-color: darkgrey;
+    }
+
+    @media only screen and (max-width: 359px) {
+      .container {
+        width: 95%;
+      }
+
+      div.titlebg h1 {
+        margin-left: 10%;
+        font-weight: bold;
+        font-size: 230%;
+      }
+
+      div.titlebg h1 span {
+        font-size: 65%;
+      }
+
+    }
+
+    @media only screen and (min-width: 360px) {
+      .container {
+        width: 95%;
+      }
+
+
+      div.titlebg h1 {
+        margin-left: 11%;
+        font-weight: bold;
+        font-size: 230%;
+      }
+
+      div.titlebg h1 span {
+        font-size: 65%;
+      }
+    }
+
+    @media only screen and (min-width: 411px) {
+      .container {
+        width: 90%;
+      }
+
+
+      div.titlebg h1 {
+        margin-left: 20%;
+        font-weight: bold;
+        font-size: 240%;
+      }
+
+      div.titlebg h1 span {
+        font-size: 70%;
+      }
+    }
+
+
+    @media only screen and (min-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+
+      div.titlebg h1 {
+        margin-left: 30px;
+        font-weight: bold;
+        font-size: 70px;
+      }
+
+      div.titlebg h1 span {
+        font-size: 40px;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .container {
+        width: 90%;
+      }
+
+
+      div.titlebg h1 {
+        margin-left: 70px;
+        font-weight: bold;
+        font-size: 80px;
+      }
+
+      div.titlebg h1 span {
+        font-size: 50px;
+      }
+
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .container {
+        width: 40%;
+      }
+
+
+      div.titlebg h1 {
+        margin-left: 70px;
+        font-weight: bold;
+        font-size: 75px;
+      }
+
+      div.titlebg h1 span {
+        font-size: 50px;
+      }
+
+      div.titlebg {
+        height: 100%;
+        max-width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @media only screen and (min-width: 2000px) {
+      .container {
+        width: 30%;
+      }
+
+      div.titlebg h1 {
+        margin-left: 70px;
+        margin-bottom: 60px;
+        font-weight: bold;
+        font-size: 70px;
+
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logoplace">
+    <img src="dark-pink-logo.png" alt="logo" />
+  </div>
+  <div class="container">
+    <div class="titlebg">
+      <div class="title">
+        <h1><span>One Time</span><br />Password?</h1>
+      </div>
+    </div>
+    <div class="content">
+      <h3>Hello (Name),</h3>
+      <br />
+      <p style="font-size: 18px;">
+        Thanks for registering for an account with Elles! Below you will find
+        a temporary password:
+      </p>
+      <div class="tempass">
+        <p>(password)</p>
+      </div>
+      <form action="" method="get" class="reset">
+        <p>Please login to your account and change your password</p>
+        <input type="button" value="Login" />
+      </form>
+      <p style="margin-bottom: 0; font-size: 23px;">Thank you,</p>
+      <h4 style="margin-top: 0; font-size: 25px;"><i>Elles Team</i></h4>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <a class="social" href="https://www.instagram.com/"><img src="Group6.png" alt="Instagram" /></a>
+      <a class="social" href="https://www.facebook.com/"><img src="Group5.png" alt="Facebook" /></a>
+    </div>
+    <br />
+    <p>www.elleapp.com | info@ellesparvictoriakuit.com</p>
+    <p>4500, hochelaga Montreal (Quebec) H1V 3N8</p>
+  </footer>
+</body>
+
+
+<br><br><br><br>
+<h3>French version</h3>
+<br><br><br>
+
+<body>
+  <div class="logoplace">
+    <img src="dark-pink-logo.png" alt="logo" />
+  </div>
+  <div class="container">
+    <div class="titlebg">
+      <div class="title">
+        <h1><span>Mot De Passe</span><br>Usage Unique</h1>
+      </div>
+    </div>
+    <div class="content">
+      <h3>Salut (Prenom),</h3>
+      <br />
+      <p style="font-size: 18px;">
+        Merci d'avoir crée un compte avec Elles! Vous trouverez ci-dessous un mot de passe temporaire:
+      </p>
+      <div class="tempass">
+        <p>(password)</p>
+      </div>
+      <form action="" method="get" class="reset">
+        <p>Veuillez vous connecter à votre compte et changer votre mot de passe</p>
+        <input type="button" value="S'identifier" />
+      </form>
+      <p style="margin-bottom: 0; font-size: 23px;">Merci,</p>
+      <h4 style="margin-top: 0; font-size: 25px;"><i>Équipe Elles</i></h4>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <a class="social" href="https://www.instagram.com/"><img src="Group6.png" alt="Instagram" /></a>
+      <a class="social" href="https://www.facebook.com/"><img src="Group5.png" alt="Facebook" /></a>
+    </div>
+    <br />
+    <p>www.elleapp.com | info@ellesparvictoriakuit.com</p>
+    <p>4500, hochelaga Montreal (Quebec) H1V 3N8</p>
+  </footer>
+</body>
+</html>
