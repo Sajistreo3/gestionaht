@@ -142,13 +142,13 @@ include "dbConnection.php";
                         <li><a class="dropdown-item" href="">Gestion</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown <?php if ($page == 'clean') {echo 'active';} ?>"><a id="sitedropdowm" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">SUCCURSALES</a>
+                <li class="nav-item dropdown <?php if ($page == 'anjou') {echo 'active';} ?>"><a id="sitedropdowm" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">SUCCURSALES</a>
                     <ul class="dropdown-menu" aria-labelledby="sitedropdowm">
-                        <li><a class="dropdown-item" href="">Maurice</a></li>
-                        <li><a class="dropdown-item" href="">Langelier</a></li>
-                        <li><a class="dropdown-item" href="">Métropolitain</a></li>
-                        <li><a class="dropdown-item" href="">Anjou</a></li>
-                        <li><a class="dropdown-item" href="">Jarry</a></li>
+                        <li><a class="dropdown-item <?php if ($page == 'maurice') {echo 'active';} ?>" href="maurice.php">Maurice</a></li>
+                        <li><a class="dropdown-item <?php if ($page == 'Langlier') {echo 'active';} ?>" href="Langlier.php">Langelier</a></li>
+                        <li><a class="dropdown-item <?php if ($page == 'metropolitan') {echo 'active';} ?> "href="metropolitan.php">Métropolitain</a></li>
+                        <li><a class="dropdown-item <?php if ($page == 'anjou') {echo 'active';} ?>" href="anjou.php">Anjou</a></li>
+                        <li><a class="dropdown-item <?php if ($page == 'Jarry') {echo 'active';} ?>" href="Jarry.php">Jarry</a></li>
                     </ul>
                 </li>
                 <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="">CARIÈRE</a></li>

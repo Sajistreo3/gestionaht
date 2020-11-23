@@ -1,22 +1,22 @@
+<?php
+include "header.php";
+?>
 <style>
-
     div.home{
-        height: 1170px;
+        height: 1565px;
     }
-    .home p{
-        text-align: center;
-    }
-    .petrologo{
-        width: 100px;
-    }
-    div.services img{
-        margin: 0 10%;
-    }
-</style>
 
+
+    iframe
+    {
+        border-radius: 20px;
+    }
+
+
+</style>
 <div class="containers" style="margin-left: 0;">
     <div class="home">
-        <h1 style="text-align: center;"><?php if ($page == 'index') {echo 'ACCUEIL';} else {echo 'A PROPOS';}  ?></h1>
+        <h1 style="text-align: center;"> Maurice</h1>
         <hr style="border-top: 1px solid white;">
         <div class="slider">
 
@@ -30,22 +30,13 @@
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="images/stations/DSC_0868.JPG" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5><i class="fa fa-map-marker"></i> Maurice-Duplessis</h5>
-                            <p>7667 Boulevard Maurice-Duplessis, Montréal, QC H1E 5M9</p>
+
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/stations/DSC_0871.JPG" alt="Second slide">
+                        <img class="d-block w-100" src="images/stations/DSC_0869.JPG" alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5><i class="fa fa-map-marker"></i> Anjou</h5>
-                            <p>6901 Boulevard des Galeries d'Anjou, Anjou, QC H1M 2W1</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="images/stations/DSC_0873.JPG" alt="Third slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5><i class="fa fa-map-marker"></i> Langelier</h5>
-                            <p>8050 Boul Langelier, Saint-Léonard, QC H1P 3A4</p>
+
                         </div>
                     </div>
                 </div>
@@ -60,20 +51,30 @@
             </div>
         </div>
         <br>
-        <p>
-            Nous offrirons un charité rapide, agréable et prévenant grâce à que nos invités se sentent appréciés
-        </p>
-        <p>
-            Toujours sur votre route.
-            Visitez un établissement Petro‑CanadaMC pour faire le plein. Certains établissements offrent du carburant de remplacement, le remplissage de bouteille de propane et un lave-auto.
-        </p>
-        <br>
+        <div class="inf">
+            <p class="address">
+                7667 Boulevard Maurice-Duplessis, Montréal, QC H1E 5M9<br>
+                Phone Number : +15146431811
+            </p>
+            <p>
+                Manager : <a href="team.php">France</a>
+            </p>
+        </div>
         <div class="services">
             <img src="images/Services/fierement-d'ici.png" alt="Fierement">
-            <img class="petrologo" src="images/Services/Petro-Canada.png" alt="Lotto Quebec">
-            <img class="petrologo" src="images/Services/Petro-Points.png" alt="Petro Points">
-
+            <img src="images/Services/Loto-Quebec_small.png" alt="Lotto Quebec">
+            <img src="images/Services/Petro-Points.png" alt="Petro Points">
+            <img src="images/Services/Relais-Cafe_small.png" alt="Cafe">
+            <img src="images/Services/Super-Doux_small.png" alt="Lave-Auto">
+            <img src="images/Services/Super-Relais_small.png" alt="Depanneur">
+            <img src="images/Services/Diesel.png" alt="Diesel">
         </div>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2790.1533508992497!2d-73.59780218443709!3d45.62765557910321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91fd1b78a7f31%3A0xd6128e282df08a12!2sPetro-Canada%20et%20Lave-Auto!5e0!3m2!1sen!2sca!4v1606091917000!5m2!1sen!2sca"
+                width="100%" height="314"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
+
 </div>
+<?php
+include "footer.php";
+?>
+
