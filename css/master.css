@@ -669,15 +669,20 @@ img.slideimg {
     border-radius: 20px;
     
 }
-.home p{
-    text-align: center;
-}
+
 
 .slider{
     width: 100%;
 }
 .inf{
 
+}
+div.services{
+    text-align: center;
+    margin-bottom: 40px;
+}
+div.services img{
+    margin: 0 3%;
 }
 /*
 .inf p{

@@ -5,13 +5,7 @@ include "header.php";
     div.home{
         height: 1565px;
     }
-    div.services{
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    div.services img{
-        margin: 0 3%;
-    }
+
 
     iframe
     {

@@ -31,8 +31,8 @@
 
 ?>
 <div class="containers" style="margin-left: 0;">
-    <p class="title">ACCUEIL</p>
-    <hr class="hrs">
+   <!-- <p class="title">ACCUEIL</p>
+    <hr class="hrs">-->
     <?php if(!isset($_SESSION['user'])): ?>
         <?php 
             include "homepage.php";
