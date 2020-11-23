@@ -109,8 +109,8 @@ include "dbConnection.php";
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <?php if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): ?>
                             <li><a class="dropdown-item <?php if ($page == 'index') {echo 'active';} ?>" href="index.php">Accueil</a></li>
-                            <li>
-                                <a class="dropdown-item dropdown-toggle <?php if ($page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} ?>" href="#">Inspections </a>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle <?php if ($page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} ?>" tabindex="-1" href="#">Inspections </a>
                                 <ul class="submenu dropdown-menu">
 			                        <li><a class="dropdown-item <?php if ($page == 'clean') {echo 'active';} ?>" href="clean.php">PROPRETÉ</a></li>
 			                        <li><a class="dropdown-item <?php if ($page == 'marchandise') {echo 'active';} ?>" href="marchandise.php">MARCHANDISE</a></li>
@@ -134,7 +134,6 @@ include "dbConnection.php";
                             <li><a class="dropdown-item <?php if ($page == 'changepass') {echo 'active';} ?>" href="changepass.php">Change Password</a></li>
                         <?php endif; ?>
                     </ul>
-
                 </li>
                 <li class="nav-item dropdown <?php if ($page == 'clean') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
                     <ul class="dropdown-menu" aria-labelledby="teamdropdown">
@@ -151,7 +150,7 @@ include "dbConnection.php";
                         <li><a class="dropdown-item" href="">Jarry</a></li>
                     </ul>
                 </li>
-                <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="">CARIÈRE</a></li>
+                <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="mailto:shardulbhatt95@gmail.com">CARIÈRE</a></li>
                 <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="">NOUS JOINDRE</a></li>
                 <!-- <?php // if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 3): ?>
                     <li class="nav-item <?php// if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="clean.php">PROPRETÉ</a></li>
