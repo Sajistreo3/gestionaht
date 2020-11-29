@@ -1,19 +1,19 @@
 <?php
  include 'header.php';
 $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAll(PDO::FETCH_ASSOC);
- include 'sidenav.php';
-// var_dump($quetions);
+// include 'sidenav.php';
+//// var_dump($quetions);
 ?>
-
+<?php include "sidenav.php"; ?>
     <div class="containers">
         <?php include "sidenavswitch.php"; ?>
         <p class="title">LAVE-AUTO</p><br>
         <hr class="hrs">
-        <form class="inspectios" id="marchand" action="core.php" method="post" enctype="multipart/form-data">
+        <form class="inspectios" action="core.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="type" value="3">
             <input type="hidden" name="evaluation" value="<?= time() ?>">
             <input type="hidden" name="site">
-            <?php foreach ($quetions as $key => $quetion): ?>
+            <?php foreach ($quetions as $keys => $quetion): ?>
                 <input type="hidden" name="question[]" value="<?= $quetion['question_number'] ?>">
                 <div class="questions">
                     <h3><?= $quetion['question_number'] . " - " . $quetion['question'] ?></h3>
@@ -30,7 +30,7 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAl
                         </select>
                     </div>
                     <br><br>
-                    <input class="fileupload" style="color: white" type="file" name="photo_<?= $key ?>[]" multiple><br><br>
+                    <input class="fileupload" style="color: white" type="file" name="photo_<?= $keys ?>[]" multiple><br><br>
                 </div>
             <?php endforeach; ?>
             <br><br>

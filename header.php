@@ -122,6 +122,7 @@ include "dbConnection.php";
                             <li><a class="dropdown-item" href="#">Admin Menu</a></li>
                             <li><a class="dropdown-item <?php if ($page == 'registration') {echo 'active';} ?>" href="registration.php">Registration</a></li>
                             <li><a class="dropdown-item <?php if ($page == 'employees') {echo 'active';} ?>" href="employees.php">Employees</a></li>
+
                             <!-- <li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 2 </a>
 		  	                    <ul class="submenu dropdown-menu">
 			                        <li><a class="dropdown-item" href="">Submenu item 1</a></li>
@@ -132,6 +133,7 @@ include "dbConnection.php";
                         <?php endif; ?>
                         <?php if (isset($_SESSION['user'])): ?>
                             <li><a class="dropdown-item <?php if ($page == 'changepass') {echo 'active';} ?>" href="changepass.php">Change Password</a></li>
+                            <li><a class="dropdown-item" href="logout.php">Déconnecter</a></li>
                         <?php endif; ?>
                     </ul>
                 </li>
@@ -159,9 +161,7 @@ include "dbConnection.php";
                     <li class="nav-item <?php// if ($page == 'secure') {echo 'active';} ?>"><a class="nav-link" href="secure.php">SÉCURITÉ</a></li>
                 <?php // endif; ?> -->
                 <li class="nav-item <?php if ($page == 'about') {echo 'active';} ?>"><a class="nav-link" href="about.php">A PROPOS</a></li>
-                <?php if (isset($_SESSION['user'])): ?>
-                    <li class="nav-item"><a class="nav-link" href="logout.php">DÉCONNECTER</a></li>
-                <?php endif; ?>
+
             </ul>
         </div>
     </nav>
