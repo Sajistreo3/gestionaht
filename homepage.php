@@ -1,3 +1,19 @@
+<style>
+
+    div.home{
+        height: 1170px;
+    }
+    .home p{
+        text-align: center;
+    }
+    .petrologo{
+        width: 100px;
+    }
+    div.services img{
+        margin: 0 10%;
+    }
+</style>
+
 <div class="containers" style="margin-left: 0;">
     <div class="home">
         <h1 style="text-align: center;"><?php if ($page == 'index') {echo 'ACCUEIL';} else {echo 'A PROPOS';}  ?></h1>
@@ -51,5 +67,13 @@
             Toujours sur votre route.
             Visitez un établissement Petro‑CanadaMC pour faire le plein. Certains établissements offrent du carburant de remplacement, le remplissage de bouteille de propane et un lave-auto.
         </p>
+        <br>
+        <div class="services">
+            <img src="images/Services/fierement-d'ici.png" alt="Fierement">
+            <img class="petrologo" src="images/Services/Petro-Canada.png" alt="Lotto Quebec">
+            <img class="petrologo" src="images/Services/Petro-Points.png" alt="Petro Points">
+
+        </div>
+
     </div>
 </div>
