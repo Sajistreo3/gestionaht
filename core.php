@@ -69,7 +69,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
         unset($_SESSION["site"]);
         header("location: inspection.php");
     } else {
-        header("location: marchandise.php?error=nosite");
+        //header("location: marchandise.php?error=nosite");
     }
 
 
