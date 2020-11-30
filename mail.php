@@ -9,8 +9,13 @@ if(isset( $_POST['subject']))
     $subject = $_POST['subject'];
 
 $content="From: $name \n Email: $email \n Message: $message";
-$recipient = "tapandabhi99@gmail.com";
+$recipient = "shardulbhatt95@gmail.com";
 $mailheader = "From: $email \r\n";
-mail($recipient, $subject, $content, $mailheader) or die("Error!");
+if (mail($recipient, $subject, $content, $mailheader) or die("Error!")) {
+    header("location: index.php");
+} else {
+    echo "error";
+}
+
 echo "Email sent!";
 ?>

@@ -78,11 +78,11 @@
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>San Francisco, CA 94126, USA</p>
+                    <p>6901 Boulevard des Galeries d'Anjou, Anjou, QC H1W 2W1, CA</p>
                 </li>
 
                 <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
+                    <p>51433520079</p>
                 </li>
 
                 <li><i class="fas fa-envelope mt-4 fa-2x"></i>
