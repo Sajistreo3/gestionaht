@@ -20,17 +20,17 @@
 
                     <!--Grid column-->
                     <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Your name</label>
+                        <div class="md-form mb-6 form-label-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" class="form-control">
+                            <label for="name">Your name</label>
                         </div>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
                     <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
+                        <div class="md-form mb-6 form-label-group">
+                            <input type="text" id="email" name="email" placeholder="Your Email" class="form-control">
                             <label for="email" class="">Your email</label>
                         </div>
                     </div>
@@ -38,18 +38,18 @@
 
                 </div>
                 <!--Grid row-->
-
+                <!-- <br> -->
                 <!--Grid row-->
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
+                        <div class="md-form mb-6 form-label-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" class="form-control">
                             <label for="subject" class="">Subject</label>
                         </div>
                     </div>
                 </div>
                 <!--Grid row-->
-
+                <!-- <br> -->
                 <!--Grid row-->
                 <div class="row">
 
@@ -57,7 +57,7 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <textarea type="text" id="message" name="message" placeholder="Your Message" rows="2" class="form-control md-textarea"></textarea>
                             <label for="message">Your message</label>
                         </div>
 

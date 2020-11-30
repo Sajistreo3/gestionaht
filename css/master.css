@@ -167,6 +167,7 @@ div.containers .title {
     color: #252628;
 }
 
+
 /* .frame {
     width: 320px;
     height: 550px;
@@ -657,7 +658,8 @@ img.slideimg {
     width: 100%;
     margin: auto;
 }
-.home{
+
+.home {
     height: 1100px;
     width: 320px;
     background: #303133;
@@ -667,23 +669,24 @@ img.slideimg {
     font-family: 'Cairo', sans-serif;
     box-shadow: 4px 6px 10px #955757;
     border-radius: 20px;
-    
 }
 
-
-.slider{
+.slider {
     width: 100%;
 }
-.inf{
 
-}
-div.services{
+.inf {}
+
+div.services {
     text-align: center;
     margin-bottom: 40px;
 }
-div.services img{
+
+div.services img {
     margin: 0 3%;
 }
+
+
 /*
 .inf p{
     display: inline;
