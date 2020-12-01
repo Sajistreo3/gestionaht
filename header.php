@@ -130,7 +130,6 @@ include "dbConnection.php";
                     </ul>-->
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): ?>
-
                         <a class="dropdown-item <?php if ($page == 'index') {echo 'active';} ?>" href="index.php">Accueil</a>
 <!--                            <div class="dropdown-divider"></div>-->
                         <a class="dropdown-toggle dropdown-item" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -149,7 +148,6 @@ include "dbConnection.php";
                             <a class="dropdown-item <?php if ($page == 'changepass') {echo 'active';} ?>" href="changepass.php">Change Password</a>
                             <a class="dropdown-item" href="logout.php">Déconnecter</a>
                         <?php endif; ?>
-
                     <?php endif; ?>
                     </div>
 

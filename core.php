@@ -33,7 +33,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
     $site = $query->fetch(PDO::FETCH_ASSOC);
     $_SESSION["site"] = $site;
     exit(json_encode($site));
-} else if (isset($_POST['action']) && $_POST['action'] == 'marchandise') {
+} else if (isset($_POST['action']) && $_POST['action'] == 'Marchandise') {
 //    var_dump($_POST);
     //var_dump($_FILES);
 
@@ -69,7 +69,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
         unset($_SESSION["site"]);
         header("location: inspection.php");
     } else {
-        //header("location: marchandise.php?error=nosite");
+        header("location: marchandise.php?error=nosite");
     }
 
 

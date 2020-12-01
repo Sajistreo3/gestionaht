@@ -9,7 +9,7 @@ if(isset( $_POST['subject']))
     $subject = $_POST['subject'];
 
 $content="From: $name \n Email: $email \n Message: $message";
-$recipient = "shardulbhatt95@gmail.com";
+$recipient = "sumiyyahalam@gmail.com";
 $mailheader = "From: $email \r\n";
 if (mail($recipient, $subject, $content, $mailheader) or die("Error!")) {
     header("location: index.php");
