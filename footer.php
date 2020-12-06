@@ -1,10 +1,10 @@
 <br><br><br><br>
-<div class="containers">
+<div id="footer" class="containers">
 <!--Section: Contact v.2-->
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 style="color: white" class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <h2 style="color: white" class="h1-responsive font-weight-bold text-center my-4">NOUS JOINDRE</h2>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
@@ -65,22 +65,22 @@
                     <!--Grid row-->
                 </form>
                 <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    <a class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
                 </div>
                 <div class="status"></div>
             </div>
             <!--Grid column-->
             <!--Grid column-->
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                 <ul class="list-unstyled mb-0">
                     <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                        <p>San Francisco, CA 94126, USA</p>
+                        <p>Montreal, Canada</p>
                     </li>
                     <li><i class="fas fa-phone mt-4 fa-2x"></i>
                         <p>+ 01 234 567 89</p>
                     </li>
                     <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                        <p>contact@mdbootstrap.com</p>
+                        <p>shajeed@live.fr</p>
                     </li>
                 </ul>
             </div>

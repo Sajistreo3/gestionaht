@@ -153,10 +153,10 @@ include "dbConnection.php";
                     </div>
 
                 </li>
-                <li class="nav-item dropdown <?php if ($page == 'clean') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
+                <li class="nav-item dropdown <?php if ($page == 'direction' || $page == 'gestion_team') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
                     <ul class="dropdown-menu" aria-labelledby="teamdropdown">
-                        <li><a class="dropdown-item" href="">Direction</a></li>
-                        <li><a class="dropdown-item" href="">Gestion</a></li>
+                        <li><a class="dropdown-item" href="direction.php">Direction</a></li>
+                        <li><a class="dropdown-item" href="gestion_team.php">Gestion</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown <?php if ($page == 'anjou') {echo 'active';} ?>"><a id="sitedropdowm" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">SUCCURSALES</a>
@@ -168,14 +168,8 @@ include "dbConnection.php";
                         <li><a class="dropdown-item <?php if ($page == 'Jarry') {echo 'active';} ?>" href="Jarry.php">Jarry</a></li>
                     </ul>
                 </li>
-                <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="mailto:shardulbhatt95@gmail.com">CARIÈRE</a></li>
-                <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="">NOUS JOINDRE</a></li>
-                <!-- <?php // if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 3): ?>
-                    <li class="nav-item <?php// if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="clean.php">PROPRETÉ</a></li>
-                    <li class="nav-item <?php// if ($page == 'marchandise') {echo 'active';} ?>"><a class="nav-link" href="marchandise.php">MARCHANDISE</a></li>
-                    <li class="nav-item <?php// if ($page == 'laveauto') {echo 'active';} ?>"><a class="nav-link" href="laveauto.php">LAVE AUTO</a></li>
-                    <li class="nav-item <?php// if ($page == 'secure') {echo 'active';} ?>"><a class="nav-link" href="secure.php">SÉCURITÉ</a></li>
-                <?php // endif; ?> -->
+                <li class="nav-item"><a class="nav-link" href="mailto:shardulbhatt95@gmail.com">CARIÈRE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">NOUS JOINDRE</a></li>
                 <li class="nav-item <?php if ($page == 'about') {echo 'active';} ?>"><a class="nav-link" href="about.php">A PROPOS</a></li>
 
             </ul>
