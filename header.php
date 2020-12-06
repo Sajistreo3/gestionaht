@@ -18,6 +18,7 @@ include "dbConnection.php";
     <link href="plugins/lightbox2-2.11.1/src/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link href="css/floating-labels.css" rel="stylesheet">
 
     <!-- Java script -->
 
