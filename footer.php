@@ -64,23 +64,23 @@
                     </div>
                     <!--Grid row-->
                 </form>
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <div class="text-center text-md-left sendbtn">
+                    <a class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
                 </div>
                 <div class="status"></div>
             </div>
             <!--Grid column-->
             <!--Grid column-->
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
                 <ul class="list-unstyled mb-0">
                     <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                        <p>San Francisco, CA 94126, USA</p>
+                        <p>Montreal, Canada</p>
                     </li>
                     <li><i class="fas fa-phone mt-4 fa-2x"></i>
                         <p>+ 01 234 567 89</p>
                     </li>
                     <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                        <p>contact@mdbootstrap.com</p>
+                        <p>shajeed@live.fr</p>
                     </li>
                 </ul>
             </div>

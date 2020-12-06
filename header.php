@@ -170,12 +170,6 @@ include "dbConnection.php";
                 </li>
                 <li class="nav-item"><a class="nav-link" href="mailto:shardulbhatt95@gmail.com">CARIÈRE</a></li>
                 <li class="nav-item"><a class="nav-link" href="#footer">NOUS JOINDRE</a></li>
-                <!-- <?php // if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 3): ?>
-                    <li class="nav-item <?php// if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="clean.php">PROPRETÉ</a></li>
-                    <li class="nav-item <?php// if ($page == 'marchandise') {echo 'active';} ?>"><a class="nav-link" href="marchandise.php">MARCHANDISE</a></li>
-                    <li class="nav-item <?php// if ($page == 'laveauto') {echo 'active';} ?>"><a class="nav-link" href="laveauto.php">LAVE AUTO</a></li>
-                    <li class="nav-item <?php// if ($page == 'secure') {echo 'active';} ?>"><a class="nav-link" href="secure.php">SÉCURITÉ</a></li>
-                <?php // endif; ?> -->
                 <li class="nav-item <?php if ($page == 'about') {echo 'active';} ?>"><a class="nav-link" href="about.php">A PROPOS</a></li>
 
             </ul>

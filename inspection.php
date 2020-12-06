@@ -106,7 +106,7 @@ $curScore = 0;
             </tbody>
         </table>
     </div>
-    <div role="tabpanel" class="tab-pane active" id="goods">
+    <div role="tabpanel" class="tab-pane" id="goods">
         <table class="table table-hover table-dark">
             <thead>
             <tr>
@@ -139,7 +139,7 @@ $curScore = 0;
             </tbody>
         </table>
     </div>
-    <div role="tabpanel" class="tab-pane active" id="carwash">
+    <div role="tabpanel" class="tab-pane" id="carwash">
         <table class="table table-hover table-dark">
             <thead>
             <tr>
@@ -172,7 +172,7 @@ $curScore = 0;
             </tbody>
         </table>
     </div>
-    <div role="tabpanel" class="tab-pane active" id="secure">
+    <div role="tabpanel" class="tab-pane" id="secure">
         <table class="table table-hover table-dark">
             <thead>
             <tr>
