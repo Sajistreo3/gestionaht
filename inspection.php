@@ -29,6 +29,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
     //var_dump($quetions);
     //var_dump($_GET['types']);
     //var_dump($result);
+    $_SESSION['evalresult'] = $result;
 }
 //var_dump($evaluations);
 
@@ -95,6 +96,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>
                             </form>
                         </td>
                     <?php endif; ?>
@@ -127,6 +129,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>
                             </form>
                         </td>
                     <?php endif; ?>
@@ -159,6 +162,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>
                             </form>
                         </td>
                     <?php endif; ?>
@@ -191,6 +195,8 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>
+
                             </form>
                         </td>
                     <?php endif; ?>

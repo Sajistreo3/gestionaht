@@ -32,7 +32,7 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '2';")->fetchAl
             </div>
         <?php endforeach; ?>
         <br><br>
-        <input class="btn btn-danger" style="float: right" type="submit" name="action" value="marchandise">
+        <input class="btn btn-danger" style="float: right" type="submit" name="action" value="Marchandise">
     </form>
 </div>
 <?php include "footer.php" ?>

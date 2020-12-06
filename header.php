@@ -105,37 +105,52 @@ include "dbConnection.php";
             <ul class="navbar-nav">
                 <li class="nav-item dropdown <?php if ($page == 'index' || $page == 'employees' || $page == 'registration' || $page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} ?>">
                     <a class="nav-link <?php if (isset($_SESSION['user'])) {echo 'dropdown-toggle';} ?>" href="index.php" <?php if (isset($_SESSION['user'])) {echo ' id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"';} ?>>ACCUEIL<span class="sr-only">(current)</span></a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <?php if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): ?>
-                            <li><a class="dropdown-item <?php if ($page == 'index') {echo 'active';} ?>" href="index.php">Accueil</a></li>
+                    <!--<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <?php /*if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): */?>
+                            <li><a class="dropdown-item <?php /*if ($page == 'index') {echo 'active';} */?>" href="index.php">Accueil</a></li>
                             <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle <?php if ($page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} ?>" tabindex="-1" href="#">Inspections </a>
+                                <a class="dropdown-item dropdown-toggle <?php /*if ($page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} */?>" tabindex="-1" href="#">Inspections </a>
                                 <ul class="submenu dropdown-menu">
-			                        <li><a class="dropdown-item <?php if ($page == 'clean') {echo 'active';} ?>" href="clean.php">PROPRETÉ</a></li>
-			                        <li><a class="dropdown-item <?php if ($page == 'marchandise') {echo 'active';} ?>" href="marchandise.php">MARCHANDISE</a></li>
-			                        <li><a class="dropdown-item <?php if ($page == 'laveauto') {echo 'active';} ?>" href="laveauto.php">LAVE AUTO</a></li>
-			                        <li><a class="dropdown-item <?php if ($page == 'secure') {echo 'active';} ?>" href="secure.php">SÉCURITÉ</a></li>
-			                        <li><a class="dropdown-item <?php if ($page == 'inspection') {echo 'active';} ?>" href="inspection.php">HISTORIQUE</a></li>
+			                        <li><a class="dropdown-item <?php /*if ($page == 'clean') {echo 'active';} */?>" href="clean.php">PROPRETÉ</a></li>
+			                        <li><a class="dropdown-item <?php /*if ($page == 'marchandise') {echo 'active';} */?>" href="marchandise.php">MARCHANDISE</a></li>
+			                        <li><a class="dropdown-item <?php /*if ($page == 'laveauto') {echo 'active';} */?>" href="laveauto.php">LAVE AUTO</a></li>
+			                        <li><a class="dropdown-item <?php /*if ($page == 'secure') {echo 'active';} */?>" href="secure.php">SÉCURITÉ</a></li>
+			                        <li><a class="dropdown-item <?php /*if ($page == 'inspection') {echo 'active';} */?>" href="inspection.php">HISTORIQUE</a></li>
 			                    </ul>
                             </li>
                             <li><a class="dropdown-item" href="#">Admin Menu</a></li>
-                            <li><a class="dropdown-item <?php if ($page == 'registration') {echo 'active';} ?>" href="registration.php">Registration</a></li>
-                            <li><a class="dropdown-item <?php if ($page == 'employees') {echo 'active';} ?>" href="employees.php">Employees</a></li>
+                            <li><a class="dropdown-item <?php /*if ($page == 'registration') {echo 'active';} */?>" href="registration.php">Registration</a></li>
+                            <li><a class="dropdown-item <?php /*if ($page == 'employees') {echo 'active';} */?>" href="employees.php">Employees</a></li>
 
-                            <!-- <li><a class="dropdown-item dropdown-toggle" href="#"> Dropdown item 2 </a>
-		  	                    <ul class="submenu dropdown-menu">
-			                        <li><a class="dropdown-item" href="">Submenu item 1</a></li>
-			                        <li><a class="dropdown-item" href="">Submenu item 2</a></li>
-			                        <li><a class="dropdown-item" href="">Submenu item 3</a></li>
-			                    </ul>
-		                    </li> -->
-                        <?php endif; ?>
-                        <?php if (isset($_SESSION['user'])): ?>
-                            <li><a class="dropdown-item <?php if ($page == 'changepass') {echo 'active';} ?>" href="changepass.php">Change Password</a></li>
+                        <?php /*endif; */?>
+                        <?php /*if (isset($_SESSION['user'])): */?>
+                            <li><a class="dropdown-item <?php /*if ($page == 'changepass') {echo 'active';} */?>" href="changepass.php">Change Password</a></li>
                             <li><a class="dropdown-item" href="logout.php">Déconnecter</a></li>
+                        <?php /*endif; */?>
+                    </ul>-->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): ?>
+                        <a class="dropdown-item <?php if ($page == 'index') {echo 'active';} ?>" href="index.php">Accueil</a>
+<!--                            <div class="dropdown-divider"></div>-->
+                        <a class="dropdown-toggle dropdown-item" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false"> <span class="nav-label"></span>Service C <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item <?php if ($page == 'clean') {echo 'active';} ?>" href="clean.php">PROPRETÉ</a></li>
+                            <li><a class="dropdown-item <?php if ($page == 'marchandise') {echo 'active';} ?>" href="marchandise.php">MARCHANDISE</a></li>
+                            <li><a class="dropdown-item <?php if ($page == 'laveauto') {echo 'active';} ?>" href="laveauto.php">LAVE AUTO</a></li>
+                            <li><a class="dropdown-item <?php if ($page == 'secure') {echo 'active';} ?>" href="secure.php">SÉCURITÉ</a></li>
+                            <li><a class="dropdown-item <?php if ($page == 'inspection') {echo 'active';} ?>" href="inspection.php">HISTORIQUE</a></li>
+                        </ul>
+                        <a class="dropdown-item" href="#">Admin Menu</a>
+                        <a class="dropdown-item <?php if ($page == 'registration') {echo 'active';} ?>" href="registration.php">Registration</a>
+                        <a class="dropdown-item <?php if ($page == 'employees') {echo 'active';} ?>" href="employees.php">Employees</a>
+                        <?php if (isset($_SESSION['user'])): ?>
+                            <a class="dropdown-item <?php if ($page == 'changepass') {echo 'active';} ?>" href="changepass.php">Change Password</a>
+                            <a class="dropdown-item" href="logout.php">Déconnecter</a>
                         <?php endif; ?>
-                    </ul>
+                    <?php endif; ?>
+                    </div>
+
                 </li>
                 <li class="nav-item dropdown <?php if ($page == 'clean') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
                     <ul class="dropdown-menu" aria-labelledby="teamdropdown">

@@ -1,4 +1,4 @@
-<?php $sites = $db->query("SELECT * FROM tbl_sites")->fetchAll(PDO::FETCH_ASSOC); ?>
+<?php $sites = $db->query("SELECT * FROM tbl_sites WHERE `status` = '1'")->fetchAll(PDO::FETCH_ASSOC); ?>
 
 
 <nav id="mySidenav" class="sidenav">
@@ -57,5 +57,6 @@
         document.getElementById("mySidenav").style.paddingLeft = "0";
         //document.getElementById("main").style.marginLeft= "0";
         document.body.style.backgroundColor = "#252628";
+        location.reload();
     }
 </script>
