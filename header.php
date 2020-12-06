@@ -153,10 +153,10 @@ include "dbConnection.php";
                     </div>
 
                 </li>
-                <li class="nav-item dropdown <?php if ($page == 'direction') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
+                <li class="nav-item dropdown <?php if ($page == 'direction' || $page == 'gestion_team') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
                     <ul class="dropdown-menu" aria-labelledby="teamdropdown">
-                        <li><a class="dropdown-item" href="">Direction</a></li>
-                        <li><a class="dropdown-item" href="">Gestion</a></li>
+                        <li><a class="dropdown-item" href="direction.php">Direction</a></li>
+                        <li><a class="dropdown-item" href="gestion_team.php">Gestion</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown <?php if ($page == 'anjou') {echo 'active';} ?>"><a id="sitedropdowm" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">SUCCURSALES</a>

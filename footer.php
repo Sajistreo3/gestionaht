@@ -64,7 +64,7 @@
                     </div>
                     <!--Grid row-->
                 </form>
-                <div class="text-center text-md-left sendbtn">
+                <div class="text-center text-md-left">
                     <a class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
                 </div>
                 <div class="status"></div>
