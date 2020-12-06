@@ -153,7 +153,7 @@ include "dbConnection.php";
                     </div>
 
                 </li>
-                <li class="nav-item dropdown <?php if ($page == 'clean') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
+                <li class="nav-item dropdown <?php if ($page == 'direction') {echo 'active';} ?>"><a id="teamdropdown" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">ÉQUIPE</a>
                     <ul class="dropdown-menu" aria-labelledby="teamdropdown">
                         <li><a class="dropdown-item" href="">Direction</a></li>
                         <li><a class="dropdown-item" href="">Gestion</a></li>
@@ -168,8 +168,8 @@ include "dbConnection.php";
                         <li><a class="dropdown-item <?php if ($page == 'Jarry') {echo 'active';} ?>" href="Jarry.php">Jarry</a></li>
                     </ul>
                 </li>
-                <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="mailto:shardulbhatt95@gmail.com">CARIÈRE</a></li>
-                <li class="nav-item <?php if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="">NOUS JOINDRE</a></li>
+                <li class="nav-item"><a class="nav-link" href="mailto:shardulbhatt95@gmail.com">CARIÈRE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#footer">NOUS JOINDRE</a></li>
                 <!-- <?php // if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 3): ?>
                     <li class="nav-item <?php// if ($page == 'clean') {echo 'active';} ?>"><a class="nav-link" href="clean.php">PROPRETÉ</a></li>
                     <li class="nav-item <?php// if ($page == 'marchandise') {echo 'active';} ?>"><a class="nav-link" href="marchandise.php">MARCHANDISE</a></li>
