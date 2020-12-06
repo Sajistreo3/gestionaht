@@ -18,7 +18,7 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAl
                     <h3><?= $quetion['question'] ?></h3>
                     <br><br><br>
                     <div style="display: inline-block; width: 100%;">
-                        <p style="float: left" class="comment">Commataire : </p><input style="" class="comment" type="text" name="comment[]" value="" placeholder="(Optional)">
+                        <p style="float: left" class="comment">Commataire : </p><input class="comment" type="text" name="comment[]" value="" placeholder="(Optional)">
                     </div>
                     <div class="rselect">
                         <!-- <p class="total">/2</p> -->
