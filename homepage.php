@@ -1,7 +1,7 @@
 <style>
 
     div.home{
-        height: 1170px;
+        height: 1550px;
     }
     .home p{
         text-align: center;
@@ -10,8 +10,98 @@
         width: 100px;
     }
     div.services img{
-        margin: 0 10%;
+        margin: 0 5%;
     }
+    .stationName{
+        display: inline;
+    }
+
+    div.cert {
+        display: block;
+        width: 500px;
+        height: 180px;
+        margin: auto;
+    }
+    div.cert img
+    {
+        display: block;
+        /*float: left;*/
+        width: 130px;
+        margin: 0 auto 20px;
+    }
+
+
+    div.cert div p
+    {
+        float: right;
+        font-size: 20px;
+    }
+
+
+    @media only screen and (max-width: 430px) {
+
+        div.home{
+            height: 2000px;
+        }
+
+        div.cert {
+           width: 263px;
+        }
+
+        div.services{
+            margin-top: 70px;
+        }
+
+        div.services img{
+           display: block;
+            margin: 0 auto 60px;
+            width: 60%;
+        }
+
+        #piclogo{
+            width: 100%;
+        }
+
+        .stationName{
+            display: block;
+        }
+
+
+    }
+
+
+    @media only screen and (max-width: 550px) {
+
+        div.home{
+            height: 2150px;
+        }
+
+        div.cert {
+            width: 263px;
+        }
+
+        div.services{
+            margin-top: 70px;
+        }
+
+        div.services img{
+            display: block;
+            margin: 0 auto 60px;
+            width: 60%;
+        }
+
+        #piclogo{
+            width: 100%;
+        }
+
+        .stationName{
+            display: block;
+        }
+
+
+    }
+
+
 </style>
 
 <div class="containers" style="margin-left: 0;">
@@ -68,11 +158,39 @@
             Visitez un établissement Petro‑CanadaMC pour faire le plein. Certains établissements offrent du carburant de remplacement, le remplissage de bouteille de propane et un lave-auto.
         </p>
         <br>
+        <div class="cert">
+            <img src="http://www.reseauglp.com/images/prix-president-2017-min.jpg" alt="trophy">
+                <p>
+                    Ce certificat est une preuve que nous fournissons l'un des meilleurs services de lavage de voiture au Québec.
+                </p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="services">
+            <p>
+            <div class="stationName">
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> MURICE-DUPLESIS
+            </div>
+            <div class="stationName">
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> GALERIES D'ANJOU
+            </div>
+            <div class="stationName">
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> LANGELIER
+            </div>
+            <div class="stationName">
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> JARRY LACORDAIRE
+            </div>
+            <div class="stationName">
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> METROPOLITAN
+            </div>
+            </p>
+            <br>
             <img src="images/Services/fierement-d'ici.png" alt="Fierement">
+            <img id="piclogo" width="300" src="images/iconnew.png" alt="Fierement">
             <img class="petrologo" src="images/Services/Petro-Canada.png" alt="Lotto Quebec">
             <img class="petrologo" src="images/Services/Petro-Points.png" alt="Petro Points">
-
         </div>
 
     </div>
