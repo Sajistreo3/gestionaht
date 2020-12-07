@@ -697,6 +697,10 @@ div.services img {
    width: 97%;
 }
 
+a.contactlink{
+    text-decoration: none;
+}
+
 /*
 .inf p{
     display: inline;

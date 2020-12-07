@@ -188,19 +188,19 @@
         <div class="services">
             <p>
             <div class="stationName">
-                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> MURICE-DUPLESIS
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> <a class="contactlink" href="maurice.php">MURICE-DUPLESIS</a>
             </div>
             <div class="stationName">
-                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> GALERIES D'ANJOU
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> <a class="contactlink" href="anjou.php">GALERIES D'ANJOU</a>
             </div>
             <div class="stationName">
-                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> LANGELIER
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> <a class="contactlink" href="Langlier.php">LANGELIER</a>
             </div>
             <div class="stationName">
-                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> JARRY LACORDAIRE
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> <a class="contactlink" href="Jarry.php">JARRY LACORDAIRE</a>
             </div>
             <div class="stationName">
-                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> METROPOLITAN
+                <i class='fab fa-canadian-maple-leaf' style='font-size:48px;color:red'></i> <a class="contactlink" href="metropolitan.php">METROPOLITAN</a>
             </div>
             </p>
             <br>

@@ -77,15 +77,15 @@
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
                 <li>
-                    <p><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Montreal, Canada</p>
+                    <p><a class="contactlink" href="https://goo.gl/maps/aVp6jpePUD5pxrUZ7"><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Montreal, Canada</a></p>
                 </li>
 
                 <li>
-                    <p><i class="fas fa-phone mt-4 fa-2x"></i>&nbsp; + 514 123 1234</p>
+                    <p><a class="contactlink" href="tel:4387285533"><i class="fas fa-phone mt-4 fa-2x"></i>&nbsp; + 514 123 1234</a></p>
                 </li>
 
                 <li>
-                    <p><i class="fas fa-envelope mt-4 fa-2x"></i> &nbsp; &nbsp; email@email.email</p>
+                    <p><a class="contactlink" href="mailto:shajeed@live.fr"><i class="fas fa-envelope mt-4 fa-2x"></i> &nbsp; &nbsp; email@email.email</a></p>
                 </li>
             </ul>
         </div>
