@@ -26,7 +26,7 @@ include "header.php";
         <hr style="border-top: 1px solid white;">
         <div class="slider">
 
-            <img class="d-block w-100" src="images/stations/DSC_0872.JPG" alt="First slide">
+            <img class="d-block w-100" src="images/stations/Lacordaire-Jarry.JPG" alt="First slide">
         </div>
         <br>
         <div class="inf">

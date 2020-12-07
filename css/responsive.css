@@ -13,6 +13,7 @@
     }
 }
 
+
 @media only screen and (min-width: 320px) {
     .containers {
         max-width: 284px;
@@ -54,6 +55,12 @@
         padding: 60px 30px;
         box-shadow: 4px 6px 10px #955757;
         border-radius: 20px;
+    }
+}
+
+@media only screen and (min-width: 430px) {
+    .containers {
+        max-width: 400px;
     }
 }
 
@@ -128,4 +135,16 @@
         font-size: 20px;
     }
 
+}
+
+@media only screen and (max-width: 1199px) {
+    .sendbtn{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .sendbtn{
+        width: 93%;
+    }
 }
