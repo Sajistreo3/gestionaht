@@ -69,6 +69,7 @@
                 </div>
                 <div class="status"></div>
             </div>
+<<<<<<< HEAD
             <!--Grid column-->
             <!--Grid column-->
             <div class="col-md-4 text-center">
@@ -85,6 +86,27 @@
                 </ul>
             </div>
             <!--Grid column-->
+=======
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Montreal, Canada</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 01 234 567 89</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>shajeed@live.fr</p>
+                </li>
+            </ul>
+>>>>>>> 7c16018e9b7ccb46ee260e7b53ec62c6d2d30862
         </div>
     </section>
 </div>
