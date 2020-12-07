@@ -114,7 +114,10 @@
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4">
+                    </li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -136,6 +139,20 @@
                         <div class="carousel-caption d-none d-md-block">
                             <h5><i class="fa fa-map-marker"></i> Langelier</h5>
                             <p>8050 Boul Langelier, Saint-Léonard, QC H1P 3A4</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/stations/Lacordaire-Jarry.JPG" alt="Fourth slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><i class="fa fa-map-marker"></i> Jarry- Lacordaire</h5>
+                            <p>7979 Boulevard Lacordaire, Saint-Léonard, QC H1R 2A1</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/stations/Métropolitain_night.JPG" alt="Fifth slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><i class="fa fa-map-marker"></i> Metropolitan</h5>
+                            <p>5200 Boul Métropolitain E, Saint-Léonard, QC H1S 1A4</p>
                         </div>
                     </div>
                 </div>

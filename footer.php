@@ -64,8 +64,8 @@
                     </div>
                     <!--Grid row-->
                 </form>
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary btn-lg btn-block" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <div class="text-center btn-block ">
+                    <a class="btn btn-primary btn-lg sendbtn" onclick="document.getElementById('contact-form').submit();">Send</a>
                 </div>
                 <div class="status"></div>
             </div>
@@ -76,16 +76,16 @@
         <!--Grid column-->
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Montreal, Canada</p>
+                <li>
+                    <p><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Montreal, Canada</p>
                 </li>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
+                <li>
+                    <p><i class="fas fa-phone mt-4 fa-2x"></i>&nbsp; + 514 123 1234</p>
                 </li>
 
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>shajeed@live.fr</p>
+                <li>
+                    <p><i class="fas fa-envelope mt-4 fa-2x"></i> &nbsp; &nbsp; email@email.email</p>
                 </li>
             </ul>
         </div>

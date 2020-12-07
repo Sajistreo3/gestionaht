@@ -136,3 +136,15 @@
     }
 
 }
+
+@media only screen and (max-width: 1199px) {
+    .sendbtn{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .sendbtn{
+        width: 93%;
+    }
+}
