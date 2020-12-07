@@ -22,13 +22,13 @@
 
 .form-label-group>label {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     display: flex;
     width: 100%;
     margin-bottom: 0;
     /* Override default `<label>` margin */
-    line-height: 1.5;
+    line-height: 1;
     color: #495057;
     border: 1px solid transparent;
     border-radius: .25rem;
