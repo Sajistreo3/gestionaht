@@ -5,10 +5,10 @@
    <!-- <p class="title">ACCUEIL</p>
     <hr class="hrs">-->
     <?php include "homepage.php";
-    if(!isset($_SESSION['user'])): ?>
-        <?php
-            include "login.php";
-        ?>
-    <?php endif; ?>
+//    if(!isset($_SESSION['user'])): ?>
+<!--        --><?php
+//            include "login.php";
+//        ?>
+<!--    --><?php //endif; ?>
   </div>
   <?php include "footer.php" ?>
