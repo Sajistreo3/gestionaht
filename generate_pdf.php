@@ -17,12 +17,13 @@ class PDF extends FPDF
 function Header()
 {
     // Logo
-    $this->Image('images/iconnewblack.png',10,3,70);
+    $this->Image('images/iconnewblack.png',70,3,70);
     $this->SetFont('Arial','B',13);
+    $this->Ln(5);
     // Move to the right
-    $this->Cell(80);
+    $this->Cell(60);
     // Title
-    $this->Cell(80,10,'Inspection List',1,0,'C');
+    $this->Cell(70,10,'Inspection List',1,0,'C');
     // Line break
     $this->Ln(20);
 }
@@ -41,9 +42,9 @@ function Footer()
 
 $db = new dbObj();
 $connString =  $db->getConnstring();
-$display_heading = array('tbl_evaluation_id'=>'ID', 'type'=> 'Type', 'question_number'=> 'Question Number','score'=> 'Score', 'comment'=> 'Comment');
+//$display_heading = array('question_number'=> 'Question Number', ,'score'=> 'Score');
 
-$result = mysqli_query($connString, "SELECT tbl_evaluation_id, type, question_number, score, comment FROM tbl_inspection") or die("database error:". mysqli_error($connString));
+$result = mysqli_query($connString, "SELECT tbl_inspection.question_number, tbl_questions.question, tbl_inspection.score, tbl_questions.total_score  FROM tbl_inspection INNER JOIN tbl_questions ON tbl_inspection.id = tbl_questions.id WHERE tbl_inspection.tbl_evaluation_id = ". $_SESSION['evalresult']['tbl_evaluation_id']) or die("database error:". mysqli_error($connString));
 //$header = mysqli_query($connString, "SHOW columns FROM tbl_inspection");
 $_SESSION['evalresult'] = $header;
 $pdf = new PDF();
@@ -51,14 +52,14 @@ $pdf = new PDF();
 $pdf->AddPage();
 //foter page
 $pdf->AliasNbPages();
-$pdf->SetFont('Arial','B',12);
-foreach($header as $heading) {
-$pdf->Cell(40,12,$display_heading[$heading['Field']],1);
-}
+$pdf->SetFont('Arial','',12);
+//foreach($header as $heading) {
+////$pdf->Cell(40,12,$display_heading[$heading['Field']],1);
+//}
 foreach($result as $row) {
 $pdf->Ln();
 foreach($row as $column)
-$pdf->Cell(40,12,$column,1);
+$pdf->Cell(40,12,$column,0);
 }
 $pdf->Output();
 ob_flush();

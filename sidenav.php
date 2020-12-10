@@ -35,7 +35,7 @@
                     $("[name='manager']").val(site.manager);
                     $("[name='address']").val(site.address);
                     $("[name='sitenum']").val(site.sitenum);
-                    //$("#marchand [name='site']").val(side.id);
+                    $("[name='site']").val(site.id);
                     $(".inspectios [name='site']").val(site.id);
                     console.log(site);
                 });

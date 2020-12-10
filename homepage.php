@@ -176,7 +176,7 @@
         </p>
         <br>
         <div class="cert">
-            <img src="http://www.reseauglp.com/images/prix-president-2017-min.jpg" alt="trophy">
+            <img src="https://www.reseauglp.com/images/prix-president-2017-min.jpg" alt="trophy">
                 <p>
                     Ce certificat est une preuve que nous fournissons l'un des meilleurs services de lavage de voiture au Québec.
                 </p>

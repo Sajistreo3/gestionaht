@@ -279,7 +279,7 @@ include "dbConnection.php";
                 <li class="<?php if ($page == 'about') {echo 'active';} ?>"><a class="" href="about.php"><i class="fas fa-info-circle"></i> &nbsp; A PROPOS</a></li>
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): ?>
                 <li>
-                    <a class="<?php if ($page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} ?>" href="#!"><i class="fas fa-clipboard-check"></i> &nbsp;Inspection</a>
+                    <a class="<?php if ($page == 'inspection' || $page == 'clean' || $page == 'marchandise' || $page == 'laveauto' || $page == 'secure') {echo 'active';} ?>" href="#!"><i class="fas fa-clipboard-check"></i> &nbsp;INSPECTION</a>
                     <ul class="nav-dropdown">
                         <li><a class="<?php if ($page == 'clean') {echo 'active';} ?>" href="clean.php">PROPRETÉ &nbsp; <i class="fas fa-broom"></i></a></li>
                         <li><a class="<?php if ($page == 'marchandise') {echo 'active';} ?>" href="marchandise.php">MARCHANDISE &nbsp; <i class="fas fa-shopping-cart"></i></a></li>
