@@ -246,6 +246,14 @@ if (isset($_POST["register"])) {
 
 }
 
+if (isset($_POST["registers"])) {
+    unset($_POST["registers"]);
+
+    $query = $db->prepare("SELECT * FROM `tbl_users` WHERE `email` = :email");
+    $query->execute(array(
+            "email" => $_POST['email'])
+    );
+}
 
 if (isset($_POST['editUser'])) {
 

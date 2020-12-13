@@ -25,11 +25,12 @@ include 'header.php';
             <?php header("refresh:3;url=registration.php");
         endif; ?>
         <form method="post" action="core.php">
-            <p>First Name :</p><input type="text" name="firstname" placeholder="First Name">
-            <p>Last Name :</p><input type="text" name="lastname" placeholder="Last Name">
-            <p>Username :</p><input type="text" name="username" placeholder="Enter Username">
-            <p>Password :</p><input type="password" name="password" placeholder="Enter Password">
-            <p>Confirm Password :</p><input type="password" name="cpassword" placeholder="Retype Password">
+            <p>First Name :</p><input type="text" name="firstname" placeholder="Enter Your First Name">
+            <p>Last Name :</p><input type="text" name="lastname" placeholder="Enter Your Last Name">
+            <p>Email :</p><input type="email" name="email" placeholder="Enter Your Email">
+            <p>Username :</p><input type="text" name="username" placeholder="Enter Your Username">
+            <p>Password :</p><input type="password" name="password" placeholder="Enter the Password">
+            <p>Confirm Password :</p><input type="password" name="cpassword" placeholder="Retype the Password">
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2): ?>
                 <select class="level" name="level">
                     <option value="" hidden>Select a Level</option>

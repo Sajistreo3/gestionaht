@@ -193,7 +193,8 @@ div.containers .title {
 }
 
 .frame input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -234,7 +235,7 @@ input[type="password"] {
 
 .register {
     width: 350px;
-    height: 800px;
+    height: 850px;
     background: #303133;
     color: #fff;
     margin: 8% auto;
