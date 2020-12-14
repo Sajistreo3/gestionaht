@@ -14,6 +14,58 @@ p
 {
     font-size: 18px;
 }
+
+        @media only screen and (max-width: 430px) {
+
+            div.home{
+                height: 2000px;
+            }
+
+            div.cert {
+                width: 263px;
+            }
+
+            div.services{
+                margin-top: 70px;
+            }
+
+            div.services img{
+                display: block;
+                margin: 0 auto 60px;
+                width: 60%;
+            }
+
+
+
+
+        }
+
+
+        @media only screen and (max-width: 550px) {
+
+            div.home{
+                height: 2150px;
+            }
+
+            div.cert {
+                width: 263px;
+            }
+
+            div.services{
+                margin-top: 70px;
+            }
+
+            div.services img{
+                display: block;
+                margin: 0 auto 60px;
+                width: 60%;
+            }
+
+
+
+
+        }
+
     </style>
 
 
