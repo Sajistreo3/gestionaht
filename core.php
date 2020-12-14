@@ -11,14 +11,15 @@ if (isset($_POST["SignIn"])) {
     );
     $users = $query->fetch(PDO::FETCH_ASSOC);
     if (!empty($users)) {
+        $_SESSION['user'] = $users;
         if ($users['valid'] == '1') {
-            $_SESSION['user'] = $users;
+
             //$_SESSION['avatar'] = $users['avatar'];
             header("location: index.php");
             //var_dump($users);
             exit();
         }else {
-            $_SESSION['user'] = $users;
+            $_SESSION['email'] = $users['email'];
             header("location: login.php?error=emailnotvalidated");
         }
     } else {
@@ -286,8 +287,8 @@ if (isset($_POST["registers"])) {
                     // header("location: index.php?success=created");
                     echo "You have been fucked succcessssfuuuulllllyyyy";
                 } else {
-                    $query = $db->prepare("INSERT INTO tbl_users (`firstname`,`lastname`,`username`, `password`, `level`,`status`) VALUES(:firstname,:lastname ,:username, :password, :level, DEFAULT)");
-                    $query->execute(array("firstname" => $_POST['firstname'], "lastname" => $_POST['lastname'], "username" => strtolower($_POST['username']), "password" => md5($_POST['password']), "level" => '7'));
+                    $query = $db->prepare("INSERT INTO tbl_users (`firstname`,`lastname`, `email`,`username`, `password`, `level`, `valid`,`status`) VALUES(:firstname,:lastname , :email ,:username, :password, :level, DEFAULT, DEFAULT)");
+                    $query->execute(array("firstname" => $_POST['firstname'], "lastname" => $_POST['lastname'],"email" => $_POST['email'] , "username" => strtolower($_POST['username']), "password" => md5($_POST['password']), "level" => '7'));
                     // header("location: index.php?success=created");
                     echo "WELCOME NEW CUSTOMER ";
                     header("location: index.php?success=checkemail");
@@ -333,7 +334,7 @@ if (isset($_POST["registers"])) {
         </head>
         <body>
           <h1>Hello  ' . $_SESSION['username'] . '</h1>
-          <p>Please validate your account to continue by <a href="http://localhost/Gestion_AHT/core.php?user=' . encrypt($id) . '">clicking here</a></p>
+          <p>Please validate your account to continue by <a href="http://localhost/gestionAHT/core.php?user=' . encrypt($id) . '">clicking here</a></p>
           <p>Regards, Team Gestion AHT</p>
         </body>
       </html>
@@ -348,9 +349,13 @@ if (isset($_POST["registers"])) {
                         echo "Error";
                         var_dump($mail);
                     }
+                    header("location: login.php?success=created");
+                    unset($_SESSION['username']);
+                }else{
+                    header("location: login.php?error=notcreated");
+                    unset($_SESSION['username']);
                 }
-                header("location: index.php?success=created");
-                unset($_SESSION['username']);
+
             } else {
                 header("location: registration.php?error=cpass");
                 echo "DFuck you bitch";
@@ -392,7 +397,7 @@ if (isset($_GET['user']) and $_GET['user'] == "retryvalidation"){
         </head>
         <body>
           <h1>Hello  '.$userid['username'].'</h1>
-          <p>Please validate your account to continue by <a href="http://localhost/B2M4/Labs/Lab3/process.php?user=' . encrypt($userid['id']) . '">clicking here</a></p>
+          <p>Please validate your account to continue by <a href="http://localhost/gestionAHT/core.php?user=' . encrypt($userid['id']) . '">clicking here</a></p>
           <p>Regards, SysAdmin</p>
         </body>
       </html>
@@ -407,14 +412,21 @@ if (isset($_GET['user']) and $_GET['user'] == "retryvalidation"){
             echo "Error";
             var_dump($mail);
         }
+        unset($_SESSION['email']);
+        unset($_SESSION['user']);
+        echo "email sent";
+        header("location: login.php?success=email_sent");
     }
-    unset($_SESSION['email']);
-    unset($_SESSION['username']);
-    echo "email sent";
-    header("location: index.php?success=email_sent");
+    else {
+        header("location: login.php?error=notcreated");
+        unset($_SESSION['username']);
+        unset($_SESSION['email']);
+        unset($_SESSION['user']);
+    }
+
 }
 else if (isset($_GET['user'])) {
-    $query = $db->prepare("UPDATE users SET valid = '1' WHERE id = :id;");
+    $query = $db->prepare("UPDATE tbl_users SET valid = '1' WHERE id = :id;");
     $query->execute(array(
             "id" => decrypt($_GET['user']),
         )
@@ -422,7 +434,7 @@ else if (isset($_GET['user'])) {
     var_dump(decrypt($_GET['user']));
     var_dump($_GET['user']);
     echo "email validated ".decrypt($_GET['user']);
-    header("location: index.php?success=emailvalid");
+    header("location: login.php?success=emailvalidated");
 
 }
 

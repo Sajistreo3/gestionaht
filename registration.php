@@ -41,7 +41,7 @@ include 'header.php';
                     <option value="7">Customer</option>
                 </select>
             <?php endif; ?>
-            <input type="submit" name="register" value="Register">
+            <input type="submit" name="registers" value="Register">
             <br><br>
         </form>
     </div>
