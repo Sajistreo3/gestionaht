@@ -2,7 +2,6 @@
  include 'header.php';
 $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAll(PDO::FETCH_ASSOC);
 // include 'sidenav.php';
-//// var_dump($quetions);
 ?>
 <?php include "sidenav.php"; ?>
     <div class="containers">
@@ -16,10 +15,10 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAl
             <?php foreach ($quetions as $keys => $quetion): ?>
                 <input type="hidden" name="question[]" value="<?= $quetion['question_number'] ?>">
                 <div class="questions">
-                    <h3><?= $quetion['question_number'] . " - " . $quetion['question'] ?></h3>
+                    <h3><?= $quetion['question'] ?></h3>
                     <br><br><br>
                     <div style="display: inline-block; width: 100%;">
-                        <p style="float: left" class="comment">Commataire : </p><input style="" class="comment" type="text" name="comment[]" value="" placeholder="(Optional)">
+                        <p style="float: left" class="comment">Commataire : </p><input class="comment" type="text" name="comment[]" value="" placeholder="(Optional)">
                     </div>
                     <div class="rselect">
                         <!-- <p class="total">/2</p> -->
@@ -34,7 +33,7 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAl
                 </div>
             <?php endforeach; ?>
             <br><br>
-            <input class="btn btn-danger" style="float: right" type="submit" name="action" value="Inspecter Lave Auto">
+            <input class="btn btn-danger" style="float: right" type="submit" name="action" value="Inspecter Lave Auto" <?php if(!isset($_SESSION["site"])) {echo "disabled";} ?>>
         </form>
     </div>
 

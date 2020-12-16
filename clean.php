@@ -1,6 +1,8 @@
 <?php
 include "header.php";
 $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '1';")->fetchAll(PDO::FETCH_ASSOC);
+//var_dump($_SESSION);
+//var_dump($_POST);
 ?>
 <?php include "sidenav.php"; ?>
 <div class="containers">
@@ -10,7 +12,7 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '1';")->fetchAl
     <form class="inspectios" action="core.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="type" value="1">
         <input type="hidden" name="evaluation" value="<?= time() ?>">
-        <input type="hidden" name="site">
+        <input type="hidden" name="site" value="<?= $_SESSION['site']['id']?>">
         <?php foreach ($quetions as  $keys => $quetion): ?>
             <input type="hidden" name="question[]" value="<?= $quetion['question_number'] ?>">
             <div class="questions">

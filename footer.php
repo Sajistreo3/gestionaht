@@ -1,10 +1,10 @@
 <br><br><br><br>
-<div class="containers">
+<div id="footer" class="containers">
 <!--Section: Contact v.2-->
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 style="color: white" class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <h2 style="color: white" class="h1-responsive font-weight-bold text-center my-4">NOUS JOINDRE</h2>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
@@ -33,6 +33,7 @@
                             <input type="text" id="email" name="email" placeholder="Your Email" class="form-control">
                             <label for="email" class="">Your email</label>
                         </div>
+                        <!--Grid column-->
                     </div>
                     <!--Grid column-->
 
@@ -60,15 +61,13 @@
                             <textarea type="text" id="message" name="message" placeholder="Your Message" rows="2" class="form-control md-textarea"></textarea>
                             <label for="message">Your message</label>
                         </div>
-
                     </div>
+                    <!--Grid row-->
+                </form>
+                <div class="text-center btn-block ">
+                    <a class="btn btn-primary btn-lg sendbtn" onclick="document.getElementById('contact-form').submit();">Send</a>
                 </div>
-                <!--Grid row-->
-
-            </form>
-
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <div class="status"></div>
             </div>
             <div class="status"></div>
         </div>
@@ -77,28 +76,23 @@
         <!--Grid column-->
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Montreal, Canada</p>
+                <li>
+                    <p><a class="contactlink" href="https://goo.gl/maps/aVp6jpePUD5pxrUZ7"><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Montreal, Canada</a></p>
                 </li>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+ 01 234 567 89</p>
+                <li>
+                    <p><a class="contactlink" href="tel:4387285533"><i class="fas fa-phone mt-4 fa-2x"></i>&nbsp; + 514 123 1234</a></p>
                 </li>
 
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>shajeed@live.fr</p>
+                <li>
+                    <p><a class="contactlink" href="mailto:shajeed@live.fr"><i class="fas fa-envelope mt-4 fa-2x"></i> &nbsp; &nbsp; email@email.email</a></p>
                 </li>
             </ul>
         </div>
-        <!--Grid column-->
-
-    </div>
-
-</section>
+    </section>
 </div>
 <!--Section: Contact v.2-->
 <!-- Footer -->
-
 <!-- Footer -->
 </body>
 </html>

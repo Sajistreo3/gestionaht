@@ -18,6 +18,57 @@ include "header.php";
         border-radius: 20px;
     }
 
+    @media only screen and (max-width: 430px) {
+
+        div.home{
+            height: 2000px;
+        }
+
+        div.cert {
+            width: 263px;
+        }
+
+        div.services{
+            margin-top: 70px;
+        }
+
+        div.services img{
+            display: block;
+            margin: 0 auto 60px;
+            width: 60%;
+        }
+
+
+
+
+    }
+
+
+    @media only screen and (max-width: 550px) {
+
+        div.home{
+            height: 2150px;
+        }
+
+        div.cert {
+            width: 263px;
+        }
+
+        div.services{
+            margin-top: 70px;
+        }
+
+        div.services img{
+            display: block;
+            margin: 0 auto 60px;
+            width: 60%;
+        }
+
+
+
+
+    }
+
 
 </style>
 <div class="containers" style="margin-left: 0;">
@@ -26,7 +77,7 @@ include "header.php";
         <hr style="border-top: 1px solid white;">
         <div class="slider">
 
-            <img class="d-block w-100" src="images/stations/DSC_0872.JPG" alt="First slide">
+            <img class="d-block w-100" src="images/stations/Lacordaire-Jarry.JPG" alt="First slide">
         </div>
         <br>
         <div class="inf">

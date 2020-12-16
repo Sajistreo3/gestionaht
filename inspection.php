@@ -29,12 +29,14 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
     //var_dump($quetions);
     //var_dump($_GET['types']);
     //var_dump($result);
+    $_SESSION['evalresult'] = $result;
 }
-//var_dump($evaluations);
+//var_dump($result);
 
+$curScore = 0.0;
+$currID = 0;
 
 //$imgs = ["q1" => 'icon.png,logo.png,login.png',"q2" => 'icon.png,logo.png,login.png',"q3" => 'icon.png,logo.png,login.png',"q4" => 'icon.png,logo.png,login.png',"q5" => 'icon.png,logo.png,login.png',]
-
 
 ?>
 
@@ -103,7 +105,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
             </tbody>
         </table>
     </div>
-    <div role="tabpanel" class="tab-pane active" id="goods">
+    <div role="tabpanel" class="tab-pane" id="goods">
         <table class="table table-hover table-dark">
             <thead>
             <tr>
@@ -135,7 +137,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
             </tbody>
         </table>
     </div>
-    <div role="tabpanel" class="tab-pane active" id="carwash">
+    <div role="tabpanel" class="tab-pane" id="carwash">
         <table class="table table-hover table-dark">
             <thead>
             <tr>
@@ -167,7 +169,7 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
             </tbody>
         </table>
     </div>
-    <div role="tabpanel" class="tab-pane active" id="secure">
+    <div role="tabpanel" class="tab-pane" id="secure">
         <table class="table table-hover table-dark">
             <thead>
             <tr>
@@ -191,6 +193,8 @@ WHERE tbl_evaluation_id = ? AND type = ?;");
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>
+
                             </form>
                         </td>
                     <?php endif; ?>
@@ -211,24 +215,36 @@ if (isset($_GET['eval_id']) && !empty($_GET['eval_id']) && isset($_GET['types'])
         <div style="height: 35px">
 
 
+<?php
+foreach ($result as $quetion) {
+    $curScore = $curScore + $result[$quetion['question_number']]['score'];
+    $currID = $result[$quetion['question_number']]['tbl_evaluation_id'];
+}
+//$_SESSION['ins_type'] = $_GET['types'];
+?>
+
         <?php if ($_GET['types'] == 1): ?>
-            <p class="title">PROPERTE</p>
+            <p class="title">PROPERTE - <?= $currID ?></>
+            <h4 class="totalresult">Total Score : <?= $curScore ?> /73 </h4>
         <?php elseif ($_GET['types'] == 2): ?>
-            <p class="title">MARCHENDISE</p>
+            <p class="title">MARCHENDISE - <?= $currID ?></p>
+            <h4 class="totalresult">Total Score : <?= $curScore ?> /100 </h4>
         <?php elseif ($_GET['types'] == 3): ?>
-            <p class="title">LAVE AUTO</p>
+            <p class="title">LAVE AUTO - <?= $currID ?></p>
+            <h4 class="totalresult">Total Score : <?= $curScore ?> /94 </h4>
         <?php elseif ($_GET['types'] == 4): ?>
-            <p class="title">SECURETE</p>
+            <p class="title">SECURETE - <?= $currID ?></p>
+            <h4 class="totalresult">Total Score : <?= $curScore ?> /100 </h4>
         <?php endif; ?>
-        <h4 style="float: right ; color: white">Total Score : 24 /90 </h4>
         </div>
+        <br>
         <hr class="hrs">
         <form action="core.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="type" value="<?= $_GET['types'] ?>">
             <input type="hidden" name="evaluation" value="<?= $_GET['eval_id'] ?>">
-            <?php foreach ($quetions
-
-            as $quetion): ?>
+            <a class="btn btn-success" href="https://localhost/gestionAHT/generate_pdf.php?eval_id=<?= $currID ?>&type=<?= $_GET['types'] ?>">Open PDF</a>
+            <br><br>
+            <?php foreach ($quetions as $quetion): ?>
             <input type="hidden" name="question[]" value="<?= $quetion['id'] ?>">
             <div class="questions">
                 <h3><?= $quetion['question_number'] . " - " . $quetion['question'] ?></h3>
