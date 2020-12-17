@@ -334,7 +334,7 @@ if (isset($_POST["registers"])) {
         </head>
         <body>
           <h1>Hello  ' . $_SESSION['username'] . '</h1>
-          <p>Please validate your account to continue by <a href="http://localhost/gestionAHT/core.php?user=' . encrypt($id) . '">clicking here</a></p>
+          <p>Please validate your account to continue by <a href="http://localhost/Gestion_AHT/core.php?user=' . encrypt($id) . '">clicking here</a></p>
           <p>Regards, Team Gestion AHT</p>
         </body>
       </html>
@@ -397,7 +397,7 @@ if (isset($_GET['user']) and $_GET['user'] == "retryvalidation"){
         </head>
         <body>
           <h1>Hello  '.$userid['username'].'</h1>
-          <p>Please validate your account to continue by <a href="http://localhost/gestionAHT/core.php?user=' . encrypt($userid['id']) . '">clicking here</a></p>
+          <p>Please validate your account to continue by <a href="http://localhost/Gestion_AHT/core.php?user=' . encrypt($userid['id']) . '">clicking here</a></p>
           <p>Regards, SysAdmin</p>
         </body>
       </html>

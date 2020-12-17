@@ -24,7 +24,7 @@
             </style>
             <div class="alert alert-danger">
                 <strong>Erreur!</strong> Votre Courriel n'est pas validé encore. Verifiez Votre Courriel,
-                <a style="color: blue;" href="http://localhost/gestionAHT/core.php?user=retryvalidation">Clickez Ici</a> pour Recevoir le Courriel a nouveau.
+                <a style="color: blue;" href="http://localhost/Gestion_AHT/core.php?user=retryvalidation">Clickez Ici</a> pour Recevoir le Courriel a nouveau.
             </div>
             <?php //header("refresh:3;url=login.php");
         elseif (isset($_GET['success']) and $_GET['success'] == "emailvalidated"): ?>
