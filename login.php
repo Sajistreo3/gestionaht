@@ -63,9 +63,9 @@
             <p>Password :</p><input type="password" name="password" placeholder="Enter Password">
             <input type="submit" name="SignIn" value="Login">
             <br><br>
-            <a href="#">Forgot password?</a><br>
-            <a href="registration.php">Don't have an account? Register.</a>
         </form>
+            <a type="submit" href="">Forgot password?</a><br>
+            <a href="registration.php">Don't have an account? Register.</a>
     </div>
 </div>
 
