@@ -1,12 +1,28 @@
 <?php
-$evaluations = $db->prepare("SELECT q.question_number, q.question, CONCAT(i.score,'/', q.total_score) as score,  i.comment, i.image, S.site_number, S.address, S.manager 
+session_start();
+include "dbConnection.php";
+$query = $db->prepare("SELECT q.question_number, q.question,i.type, i.score, q.total_score,  i.comment, i.image, S.site_number, S.address, S.manager , u.firstname
 FROM tbl_inspection i
 JOIN tbl_questions q
 ON q.question_number = i.question_number and q.type = i.type
 JOIN tbl_sites s
-ON S.id = I.tbl_sites_id 
-WHERE i.tbl_evaluation_id = ?")->fetchAll(PDO::FETCH_ASSOC);
+ON s.id = i.tbl_sites_id 
+JOIN tbl_users u
+ON u.id = i.tbl_users_id
+WHERE i.tbl_evaluation_id = ?");
+$query->execute(array($_GET['eval_id']));
+$evaluation = $query->fetchAll(PDO::FETCH_ASSOC);
+$curScore =0;
 
+foreach ($evaluation as $key) {
+    $user = $key['firstname'];
+    $manager = $key['manager'];
+    $type = $key['type'];
+    $site = $key['site_number'];
+    $address = $key['address'];
+    $curScore = $curScore + $key['score'];
+}
+//var_dump($evaluation);
 ?>
 
 <!doctype html>
@@ -70,9 +86,15 @@ WHERE i.tbl_evaluation_id = ?")->fetchAll(PDO::FETCH_ASSOC);
         }
         header h4.eval-result{
             float: right;
+            <?php if ($curScore <= 50):?>
+                color: red;
+            <?php else:?>
+                color: limegreen;
+            <?php endif;?>
         }
 
         .eval{
+            overflow: hidden;
             margin-left: 150px;
         }
 
@@ -80,58 +102,86 @@ WHERE i.tbl_evaluation_id = ?")->fetchAll(PDO::FETCH_ASSOC);
             display: inline;
             float: right;
         }
+
+        .images{
+            display: inline-block;
+            width: 300px;
+        }
+
+        div.image{
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 <page size="A4">
     <div class="logo"><img src="images/iconnewblack.png" alt=""></div>
     <nav>
-        <h4>13/02/2020</h4>
+        <h4><?= date("d/m/Y", $_GET['eval_id']) ?></h4>
     </nav>
     <header>
-
-        <h4 class="eval-type">Évaluation Propreté</h4>
-        <h4 class="eval-result">56,5/73 (77,4%)</h4>
+        <h4 class="eval-type">Évaluation <?php  if ($type == 1){echo 'Propreté';} elseif ($type == 2) {echo 'Marchandise';} elseif ($type == 3) {echo 'Lave Auto';} elseif ($type == 4) {echo 'Securité';} ?></h4>
+        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '73';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo $curScore/100*73;} elseif ($type == 2) {echo $curScore;} elseif ($type == 3) {echo $curScore/100*94;} elseif ($type == 4) {echo $curScore;} ?>%)</h4>
     </header>
     <hr>
     <div class="nav">
         <p>
             <b>Site</b><br>
-            12177 - Maurice - Duplessis (MTL)
+            <?= $site ?> (MTL)
         </p>
         <p>
             <b>Gérant</b><br>
-            Pratik
+            <?= $manager ?>
         </p>
         <p>
             <b>Température</b><br>
-            7455 Lacordaire
-        </p>
-        <p>
-            <b>P.S.I.</b><br>
-            Shajeed
+            <?= $address ?>
         </p>
         <p>
             <b>Inspecté par</b><br>
-            Martin Laporte
+            <?= $user ?>
         </p>
     </div>
 
+    <?php foreach ($evaluation as $key): ?>
     <div class="eval">
         <p class="question">
-            <b>1 - Les panneaux de stainless des pompes sont-ils propres ?</b>
-            <span style="float: right">1/2</span>
+            <?php if ($type != 3): ?>
+                <b><?= $key['question_number'] ?> - <?= $key['question'] ?></b>
+            <?php else: ?>
+                <b><?= $key['question'] ?></b>
+            <?php endif; ?>
+            <span style="float: right"><?= $key['score'] ?>/<?= $key['total_score'] ?></span>
         </p>
         <p class="comment">
-            Commentaire : P <br>
+            Commentaire : <?= $key['comment'] ?> <br>
             <i>Voir photo(s) à la fin du rapport</i>
         </p>
     </div>
+    <?php endforeach; ?>
 
+    <br><br><br>
+<div class="eval">
 
+    <?php foreach ($evaluation as $key):
+        if (!empty($key['image'])){
+            foreach (explode(',',$key['image']) as $filename): ?>
+    <div class="images">
+                <p class="question">
+                    <?php if ($type != 3): ?>
+                        <b><?= $key['question_number'] ?> - <?= $key['question'] ?></b>
+                    <?php else: ?>
+                        <b><?= $key['question'] ?></b>
+                    <?php endif; ?>
+                </p>
+                <div class="image">
+                    <img style="width: 100%" src="images/<?= $filename ?>" alt="image">
+                </div>
+    </div>
+            <?php endforeach; ?>
+        <?php } endforeach; ?>
 
-
+</div>
 </page>
-
 </body>
 </html>

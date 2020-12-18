@@ -99,6 +99,7 @@ $currID = 0;
                                 <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
                                 <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
                             </form>
                         </td>
                     <?php endif; ?>
@@ -133,6 +134,7 @@ $currID = 0;
                                 <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
                                 <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
                             </form>
                         </td>
                     <?php endif; ?>
@@ -167,6 +169,7 @@ $currID = 0;
                                 <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
                                 <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
                             </form>
                         </td>
                     <?php endif; ?>
@@ -200,8 +203,8 @@ $currID = 0;
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
                                 <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
-                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>
-
+<!--                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>-->
+<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
                             </form>
                         </td>
                     <?php endif; ?>
@@ -232,7 +235,7 @@ foreach ($result as $quetion) {
 
         <?php if ($_GET['types'] == 1): ?>
             <p class="title">PROPERTE - <?= $currID ?></>
-            <h4 class="totalresult">Total Score : <?= $curScore ?> /73 </h4>
+                <h4 class="totalresult">Total Score : <?= $curScore ?> /73 </h4>
         <?php elseif ($_GET['types'] == 2): ?>
             <p class="title">MARCHENDISE - <?= $currID ?></p>
             <h4 class="totalresult">Total Score : <?= $curScore ?> /100 </h4>
@@ -249,7 +252,7 @@ foreach ($result as $quetion) {
         <form action="core.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="type" value="<?= $_GET['types'] ?>">
             <input type="hidden" name="evaluation" value="<?= $_GET['eval_id'] ?>">
-            <a class="btn btn-success" href="https://localhost/gestionAHT/generate_pdf.php?eval_id=<?= $currID ?>&type=<?= $_GET['types'] ?>">Open PDF</a>
+            <a class="btn btn-success" href="pdf.php?eval_id=<?= $currID ?>">Open PDF</a>
             <br><br>
             <?php foreach ($quetions as $quetion): ?>
             <input type="hidden" name="question[]" value="<?= $quetion['id'] ?>">
