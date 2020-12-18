@@ -337,7 +337,7 @@ $singleUser = $db->query("SELECT * FROM `tbl_users` WHERE `id` = 5")->fetch(PDO:
 <script>
     $(function () {
         $(".deleteBtn").on("click", function () {
-            return confirm('Are you sure you want to delete this student?\nThis action cannot be undone!');
+            return confirm('Are you sure you want to delete this User?\nThis action cannot be undone!');
         });
 
         $('#editModal').on('shown.bs.modal', function (e) {

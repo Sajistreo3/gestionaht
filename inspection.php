@@ -96,6 +96,8 @@ $currID = 0;
                             <form action="">
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
+                                <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
+                                <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
                             </form>
                         </td>
@@ -128,6 +130,8 @@ $currID = 0;
                             <form action="">
                                 <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
                                 <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
+                                <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
+                                <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
                                 <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
                             </form>
                         </td>
