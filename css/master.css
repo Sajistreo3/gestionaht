@@ -168,17 +168,6 @@ div.containers .title {
 }
 
 
-/* .frame {
-    width: 320px;
-    height: 550px;
-    background: #303133;
-    color: #fff;
-    margin: 8% auto;
-    padding: 50px 30px;
-    font-family: 'Cairo', sans-serif;
-    box-shadow: 4px 6px 10px #955757;
-    border-radius: 20px;
-} */
 
 .frame {
     width: 320px;
@@ -188,7 +177,8 @@ div.containers .title {
     margin: 8% auto;
     padding: 50px 30px;
     font-family: 'Cairo', sans-serif;
-    box-shadow: 4px 6px 10px #955757;
+    /*box-shadow: 4px 6px 10px #955757;*/
+    box-shadow: 0px 0px 25px 10px #EE1123;
     border-radius: 20px;
 }
 
@@ -209,18 +199,17 @@ input[type="email"] {
     border: none;
     outline: none;
     height: 40px;
-    background: #B44B35;
+    background: #9E0B17;
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
     width: 100%;
     margin: 30px 0 0;
-    transition: all 0.05s ease-in-out;
-}
+    transition: all .3s ease-in-out;}
 
 .frame input[type="submit"]:hover {
     cursor: pointer;
-    background: #fa8f78;
+    background: #EE1123;
     color: #000;
 }
 
@@ -668,7 +657,7 @@ img.slideimg {
     margin: 8% auto;
     padding: 50px 30px;
     font-family: 'Cairo', sans-serif;
-    box-shadow: 4px 6px 10px #955757;
+    box-shadow: 0px 0px 25px 10px #EE1123;
     border-radius: 20px;
 }
 
