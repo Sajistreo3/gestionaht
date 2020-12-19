@@ -255,7 +255,7 @@ foreach ($result as $quetion) {
             <a class="btn btn-success" href="pdf.php?eval_id=<?= $currID ?>">Open PDF</a>
             <br><br>
             <?php foreach ($quetions as $quetion): ?>
-            <input type="hidden" name="question[]" value="<?= $quetion['id'] ?>">
+<!--            <input type="hidden" name="question[]" value="--><?//= $quetion['id'] ?><!--">-->
             <div class="questions">
                 <h3><?= $quetion['question_number'] . " - " . $quetion['question'] ?></h3>
                 <div class="rselect">

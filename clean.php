@@ -3,6 +3,8 @@ include "header.php";
 $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '1';")->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($_SESSION);
 //var_dump($_POST);
+
+
 ?>
 <?php include "sidenav.php"; ?>
 <div class="containers">

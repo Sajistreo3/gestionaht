@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "dbConnection.php";
-$query = $db->prepare("SELECT q.question_number, q.question,i.type, i.score, q.total_score,  i.comment, i.image, S.site_number, S.address, S.manager , u.firstname
+$query = $db->prepare("SELECT q.question_number, q.question,i.type, i.score, q.total_score,  i.comment, i.image, s.site_number, s.address, s.manager , u.firstname
 FROM tbl_inspection i
 JOIN tbl_questions q
 ON q.question_number = i.question_number and q.type = i.type
@@ -33,6 +33,11 @@ foreach ($evaluation as $key) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PDF</title>
+    <script type="text/javascript">
+        <!--
+        window.print();
+        //-->
+    </script>
     <style>
         body {
             background: rgb(204,204,204);
