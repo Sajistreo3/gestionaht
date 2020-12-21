@@ -126,7 +126,7 @@ foreach ($evaluation as $key) {
     </nav>
     <header>
         <h4 class="eval-type">Évaluation <?php  if ($type == 1){echo 'Propreté';} elseif ($type == 2) {echo 'Marchandise';} elseif ($type == 3) {echo 'Lave Auto';} elseif ($type == 4) {echo 'Securité';} ?></h4>
-        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '73';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo $curScore/100*73;} elseif ($type == 2) {echo $curScore;} elseif ($type == 3) {echo $curScore/100*94;} elseif ($type == 4) {echo $curScore;} ?>%)</h4>
+        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '73';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo round($curScore/73*100, 1);} elseif ($type == 2) {echo round($curScore, 1);} elseif ($type == 3) {echo round($curScore/94*100, 1);} elseif ($type == 4) {echo round($curScore, 1);} ?>%)</h4>
     </header>
     <hr>
     <div class="nav">
@@ -180,7 +180,7 @@ foreach ($evaluation as $key) {
                     <?php endif; ?>
                 </p>
                 <div class="image">
-                    <img style="width: 100%" src="images/<?= $filename ?>" alt="image">
+                    <img style="width: 100%" src="images/inspections/<?= $filename ?>" alt="image">
                 </div>
     </div>
             <?php endforeach; ?>

@@ -37,6 +37,14 @@
         font-size: 20px;
     }
 
+    div.carousel-caption h5{
+        color: #EE1123;
+    }
+
+    div.carousel-caption p{
+        color: #9E0B17;
+    }
+
 
     @media only screen and (max-width: 430px) {
 
@@ -44,8 +52,12 @@
             height: 2000px;
         }
 
-        div.cert {
+        div.cert{
            width: 263px;
+        }
+
+        div.cert a img{
+            width: 130px;
         }
 
         div.services{
@@ -76,8 +88,12 @@
             height: 2150px;
         }
 
-        div.cert {
+        div.cert{
             width: 263px;
+        }
+
+        div.cert a img{
+            width: 130px;
         }
 
         div.services{
@@ -157,11 +173,11 @@
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span style="color: #EE1123;" class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span style="color: #EE1123;" class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>
@@ -176,7 +192,8 @@
         </p>
         <br>
         <div class="cert">
-            <img src="https://www.reseauglp.com/images/prix-president-2017-min.jpg" alt="trophy">
+<!--            <img src="images/trophy.jpg" alt="trophy">-->
+            <a href="images/trophy.jpg" data-lightbox="roadtrip"><img src="images/trophy.jpg" alt="trophy"></a>
                 <p>
                     Ce certificat est une preuve que nous fournissons l'un des meilleurs services de lavage de voiture au Québec.
                 </p>

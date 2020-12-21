@@ -274,7 +274,7 @@ foreach ($result as $quetion) {
                     <?php foreach (explode(',', $result[$quetion['question_number']]['image']) as $filename):
                         ?>
                         <?php if ($filename != ''): ?>
-                            <a href="images/<?= $filename ?>" data-lightbox="roadtrip"><img width="126" src="images/<?= $filename ?>" alt="images"></a>
+                            <a href="images/inspections/<?= $filename ?>" data-lightbox="roadtrip"><img width="126" src="images/inspections/<?= $filename ?>" alt="images"></a>
                         <?php endif; ?>
                     <?php endforeach; ?>
                 </div>

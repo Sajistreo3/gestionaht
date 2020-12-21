@@ -48,7 +48,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
             foreach ($value2 as $key3 => $value3) {
                 if ($key2 == "tmp_name")
                     if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/' . $value1['name'][$key3]);
+                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
             }
         }
     }
@@ -86,7 +86,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
             foreach ($value2 as $key3 => $value3) {
                 if ($key2 == "tmp_name")
                     if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/' . $value1['name'][$key3]);
+                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
             }
         }
     }
@@ -122,7 +122,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
             foreach ($value2 as $key3 => $value3) {
                 if ($key2 == "tmp_name")
                     if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/' . $value1['name'][$key3]);
+                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
             }
         }
     }
@@ -158,7 +158,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
             foreach ($value2 as $key3 => $value3) {
                 if ($key2 == "tmp_name")
                     if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/' . $value1['name'][$key3]);
+                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
             }
         }
     }
