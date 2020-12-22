@@ -78,7 +78,7 @@ include "dbConnection.php";
             font-size: 15px!important;
         }
         nav ul li a:hover, nav ul li a:visited:hover {
-            background: #f98080;
+            background: #F3606C;
             color: black;
             text-decoration: none;
             padding-bottom: 10px;
@@ -178,7 +178,7 @@ include "dbConnection.php";
             transform: rotate(-45deg);
         }
         a.active{
-            background: #B44B35!important;
+            background: #EE1123!important;
         }
 
     </style>
