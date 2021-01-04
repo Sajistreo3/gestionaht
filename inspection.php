@@ -55,11 +55,181 @@ $currID = 0;
 <!--    <input type="submit">-->
 <!--</form>-->
 
+<!--BEGUN MODIFITIONA-->
+
+<!--<div class="tab-content">-->
+<!--    <ul class="nav nav-tabs" role="tablist">-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link  active" href="#clean" role="tab" data-toggle="tab"-->
+<!--               aria-selected="true">Propreté</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="#goods" role="tab" data-toggle="tab">Marchendise</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="#carwash" role="tab" data-toggle="tab">Lave Auto</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="#secure" role="tab" data-toggle="tab">Sécurité</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!---->
+<!---->
+<!--    <div role="tabpanel" class="tab-pane active" id="clean">-->
+<!--        <table class="table table-hover table-dark">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th scope="col">ID</th>-->
+<!--                <th scope="col">Date & Time</th>-->
+<!--                <th scope="col">Site</th>-->
+<!--                <th scope="col">Inspector</th>-->
+<!--                <th scope="col" class="text-center">Action</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            --><?php //foreach ($evaluations as $key => $eval): ?>
+<!--                <tr>-->
+<!--                    --><?php //if ($evaluations[$key]['type'] == 1): ?>
+<!--                        <th scope="row">--><?//= $eval['tbl_evaluation_id'] ?><!--</th>-->
+<!--                        <td>--><?//= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?><!--</td>-->
+<!--                        <td>--><?//= $eval['site_number'] ?><!--</td>-->
+<!--                        <td>--><?//= $eval['firstname'] ?><!--</td>-->
+<!--                        <td>-->
+<!--                            <form action="">-->
+<!--                                <input type="hidden" name="eval_id" value="--><?//= $eval['tbl_evaluation_id'] ?><!--">-->
+<!--                                <input type="hidden" name="types" value="--><?//= $evaluations[$key]['type'] ?><!--">-->
+<!--                                <input type="hidden" name="site" value="--><?//= $evaluations[$key]['site_number'] ?><!--">-->
+<!--                                <input type="hidden" name="inspector" value="--><?//= $evaluations[$key]['firstname'] ?><!--">-->
+<!--                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">-->
+<!--                                                                <a class="btn btn-success" href="pdf.php?eval_id=-->--><?////= $currID ?><!--<!--">Open PDF</a>-->-->
+<!--                            </form>-->
+<!--                        </td>-->
+<!--                    --><?php //endif; ?>
+<!--                </tr>-->
+<!--            --><?php //endforeach; ?>
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div role="tabpanel" class="tab-pane" id="goods">-->
+<!--        <table class="table table-hover table-dark">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th scope="col">ID</th>-->
+<!--                <th scope="col">Date & Time</th>-->
+<!--                <th scope="col">Site</th>-->
+<!--                <th scope="col">Inspector</th>-->
+<!--                <th scope="col" class="text-center">Action</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            --><?php //foreach ($evaluations as $key => $eval): ?>
+<!--                <tr>-->
+<!--                    --><?php //if ($evaluations[$key]['type'] == 2): ?>
+<!--                        <th scope="row">--><?//= $eval['tbl_evaluation_id'] ?><!--</th>-->
+<!--                        <td>--><?//= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?><!--</td>-->
+<!--                        <td>--><?//= $eval['site_number'] ?><!--</td>-->
+<!--                        <td>--><?//= $eval['firstname'] ?><!--</td>-->
+<!--                        <td>-->
+<!--                            <form action="">-->
+<!--                                <input type="hidden" name="eval_id" value="--><?//= $eval['tbl_evaluation_id'] ?><!--">-->
+<!--                                <input type="hidden" name="types" value="--><?//= $evaluations[$key]['type'] ?><!--">-->
+<!--                                <input type="hidden" name="site" value="--><?//= $evaluations[$key]['site_number'] ?><!--">-->
+<!--                                <input type="hidden" name="inspector" value="--><?//= $evaluations[$key]['firstname'] ?><!--">-->
+<!--                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">-->
+<!--                                                                <a class="btn btn-success" href="pdf.php?eval_id=-->--><?////= $currID ?><!--<!--">Open PDF</a>-->-->
+<!--                            </form>-->
+<!--                        </td>-->
+<!--                    --><?php //endif; ?>
+<!--                </tr>-->
+<!--            --><?php //endforeach; ?>
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div role="tabpanel" class="tab-pane" id="carwash">-->
+<!--        <table class="table table-hover table-dark">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th scope="col">ID</th>-->
+<!--                <th scope="col">Date & Time</th>-->
+<!--                <th scope="col">Site</th>-->
+<!--                <th scope="col">Inspector</th>-->
+<!--                <th scope="col" class="text-center">Action</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            --><?php //foreach ($evaluations as $key => $eval): ?>
+<!--                <tr>-->
+<!--                    --><?php //if ($evaluations[$key]['type'] == 3): ?>
+<!--                        <th scope="row">--><?//= $eval['tbl_evaluation_id'] ?><!--</th>-->
+<!--                        <td>--><?//= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?><!--</td>-->
+<!--                        <td>--><?//= $eval['site_number'] ?><!--</td>-->
+<!--                        <td>--><?//= $eval['firstname'] ?><!--</td>-->
+<!--                        <td>-->
+<!--                            <form action="">-->
+<!--                                <input type="hidden" name="eval_id" value="--><?//= $eval['tbl_evaluation_id'] ?><!--">-->
+<!--                                <input type="hidden" name="types" value="--><?//= $evaluations[$key]['type'] ?><!--">-->
+<!--                                <input type="hidden" name="site" value="--><?//= $evaluations[$key]['site_number'] ?><!--">-->
+<!--                                <input type="hidden" name="inspector" value="--><?//= $evaluations[$key]['firstname'] ?><!--">-->
+<!--                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">-->
+<!--                                                                <a class="btn btn-success" href="pdf.php?eval_id=-->--><?////= $currID ?><!--<!--">Open PDF</a>-->-->
+<!--                            </form>-->
+<!--                        </td>-->
+<!--                    --><?php //endif; ?>
+<!--                </tr>-->
+<!--            --><?php //endforeach; ?>
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div role="tabpanel" class="tab-pane" id="secure">-->
+<!--        <table class="table table-hover table-dark">-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th scope="col">ID</th>-->
+<!--                <th scope="col">Date & Time</th>-->
+<!--                <th scope="col">Site</th>-->
+<!--                <th scope="col">Inspector</th>-->
+<!--                <th scope="col" class="text-center">Action</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            --><?php //foreach ($evaluations as $key => $eval): ?>
+<!--                <tr>-->
+<!--                    --><?php //if ($evaluations[$key]['type'] == 4): ?>
+<!--                        <th scope="row">--><?//= $eval['tbl_evaluation_id'] ?><!--</th>-->
+<!--                        <td>--><?//= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?><!--</td>-->
+<!--                        <td>--><?//= $eval['site_number'] ?><!--</td>-->
+<!--                        <td>--><?//= $eval['firstname'] ?><!--</td>-->
+<!--                        <td>-->
+<!--                            <form action="">-->
+<!--                                <input type="hidden" name="eval_id" value="--><?//= $eval['tbl_evaluation_id'] ?><!--">-->
+<!--                                <input type="hidden" name="types" value="--><?//= $evaluations[$key]['type'] ?><!--">-->
+<!--                                <input type="hidden" name="site" value="--><?//= $evaluations[$key]['site_number'] ?><!--">-->
+<!--                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">-->
+<!--                                                               <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>-->-->
+<!--                                                               <a class="btn btn-success" href="pdf.php?eval_id=-->--><?////= $currID ?><!--<!--">Open PDF</a>-->-->
+<!--                            </form>-->
+<!--                        </td>-->
+<!--                    --><?php //endif; ?>
+<!--                </tr>-->
+<!--            --><?php //endforeach; ?>
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--END MODIFITIONA-->
+
 <div class="tab-content">
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
             <a class="nav-link  active" href="#clean" role="tab" data-toggle="tab"
-               aria-selected="true">Propreté</a>
+               aria-selected="true">
+                <div class="card-header">
+                    <i class="fas fa-table mr-1"></i>
+                    Propreté
+                </div>
+            </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#goods" role="tab" data-toggle="tab">Marchendise</a>
@@ -76,13 +246,13 @@ $currID = 0;
     <div role="tabpanel" class="tab-pane active" id="clean">
         <table class="table table-hover table-dark">
             <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Date & Time</th>
-                <th scope="col">Site</th>
-                <th scope="col">Inspector</th>
-                <th scope="col" class="text-center">Action</th>
-            </tr>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Site</th>
+                    <th scope="col">Inspector</th>
+                    <th scope="col" class="text-center">Action</th>
+                </tr>
             </thead>
             <tbody>
             <?php foreach ($evaluations as $key => $eval): ?>
@@ -299,34 +469,5 @@ foreach ($result as $quetion) {
     </div>
 <?php endif; ?>
 
-<?php
-/*if (isset($_GET['eval_id']) && !empty($_GET['eval_id']) && isset($_GET['types']) && !empty($_GET['types'])) :
-    var_dump($_GET['eval_id']);
-    var_dump($_GET['types']);
-    */ ?><!--
-    <div class="main">
-        <p class="title">MARCHANDISE</p>
-        <hr>
-        <form action="core.php" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="type" value="<? /*= $_GET['types'] */ ?>">
-            <input type="hidden" name="evaluation" value="<? /*= $_GET['eval_id'] */ ?>">
-            <?php /*foreach ($quetions as $quetion): */ ?>
-                <input type="hidden" name="question[]" value="<? /*= $quetion['id'] */ ?>">
-                <div class="questions">
-                    <h3><? /*= $quetion['question_number'] . " - " . $quetion['question'] */ ?></h3>
-                    <div class="rselect">
-                        <p><? /*= $result[$quetion['question_number']]['score'] */ ?> / <? /*= $quetion['total_score'] */ ?></p>
-                    </div>
-                    <br><br><br>
-                    <p class="comment">Commataire : </p><input class="comment" type="text" name="comment[]"
-                                                               value="<? /*= $result[$quetion['question_number']]['comment'] */ ?>"
-                                                               placeholder="(Optional)">
-                    <br><br>
-                    <img src="images/<? /*= $result[$quetion['question_number']]['image'] */ ?>" alt="images" width="350">
-                </div>
-            <?php /*endforeach; */ ?>
-        </form>
-    </div>
---><?php /*endif; */ ?>
 
 <?php include "footer.php" ?>
