@@ -45,6 +45,10 @@
         color: #9E0B17;
     }
 
+    ol.carousel-indicators li {
+        background-color: #EE1123;
+    }
+
 
     @media only screen and (max-width: 430px) {
 

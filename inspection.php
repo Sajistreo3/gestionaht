@@ -219,17 +219,16 @@ $currID = 0;
 
 
 <!--END MODIFITIONA-->
-
+<style>
+    ul.nav-tabs li.nav-item a{
+        transition: 0.2s;
+    }
+</style>
 <div class="tab-content">
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
             <a class="nav-link  active" href="#clean" role="tab" data-toggle="tab"
-               aria-selected="true">
-                <div class="card-header">
-                    <i class="fas fa-table mr-1"></i>
-                    Propreté
-                </div>
-            </a>
+               aria-selected="true">Propreté</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#goods" role="tab" data-toggle="tab">Marchendise</a>
@@ -244,144 +243,198 @@ $currID = 0;
 
 
     <div role="tabpanel" class="tab-pane active" id="clean">
-        <table class="table table-hover table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Date & Time</th>
-                    <th scope="col">Site</th>
-                    <th scope="col">Inspector</th>
-                    <th scope="col" class="text-center">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($evaluations as $key => $eval): ?>
-                <tr>
-                    <?php if ($evaluations[$key]['type'] == 1): ?>
-                        <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
-                        <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
-                        <td><?= $eval['site_number'] ?></td>
-                        <td><?= $eval['firstname'] ?></td>
-                        <td>
-                            <form action="">
-                                <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
-                                <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
-                                <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
-                                <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
-                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
-<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
-                            </form>
-                        </td>
-                    <?php endif; ?>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+        <div class="card-body instable">
+            <div class="table-responsive">
+                <table id="type-one" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($evaluations as $key => $eval): ?>
+                        <?php if ($evaluations[$key]['type'] == 1): ?>
+                            <tr>
+
+                                <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
+                                <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
+                                <td><?= $eval['site_number'] ?></td>
+                                <td><?= $eval['firstname'] ?></td>
+                                <td style="text-align: center;">
+                                    <form action="">
+                                        <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
+                                        <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
+                                        <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
+                                        <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
+                                        <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                        <!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
+                                    </form>
+                                </td>
+
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="goods">
-        <table class="table table-hover table-dark">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Date & Time</th>
-                <th scope="col">Site</th>
-                <th scope="col">Inspector</th>
-                <th scope="col" class="text-center">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($evaluations as $key => $eval): ?>
-                <tr>
-                    <?php if ($evaluations[$key]['type'] == 2): ?>
-                        <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
-                        <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
-                        <td><?= $eval['site_number'] ?></td>
-                        <td><?= $eval['firstname'] ?></td>
-                        <td>
-                            <form action="">
-                                <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
-                                <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
-                                <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
-                                <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
-                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
-<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
-                            </form>
-                        </td>
-                    <?php endif; ?>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+        <div class="card-body instable">
+            <div class="table-responsive">
+                <table id="type-two" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($evaluations as $key => $eval): ?>
+                        <?php if ($evaluations[$key]['type'] == 2): ?>
+                            <tr>
+                                <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
+                                <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
+                                <td><?= $eval['site_number'] ?></td>
+                                <td><?= $eval['firstname'] ?></td>
+                                <td style="text-align: center;">
+                                    <form action="">
+                                        <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
+                                        <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
+                                        <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
+                                        <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
+                                        <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                        <!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="carwash">
-        <table class="table table-hover table-dark">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Date & Time</th>
-                <th scope="col">Site</th>
-                <th scope="col">Inspector</th>
-                <th scope="col" class="text-center">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($evaluations as $key => $eval): ?>
-                <tr>
-                    <?php if ($evaluations[$key]['type'] == 3): ?>
-                        <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
-                        <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
-                        <td><?= $eval['site_number'] ?></td>
-                        <td><?= $eval['firstname'] ?></td>
-                        <td>
-                            <form action="">
-                                <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
-                                <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
-                                <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
-                                <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
-                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
-<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
-                            </form>
-                        </td>
-                    <?php endif; ?>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+        <div class="card-body instable">
+            <div class="table-responsive">
+                <table id="type-three" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($evaluations as $key => $eval): ?>
+                        <?php if ($evaluations[$key]['type'] == 3): ?>
+                            <tr>
+                                <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
+                                <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
+                                <td><?= $eval['site_number'] ?></td>
+                                <td><?= $eval['firstname'] ?></td>
+                                <td style="text-align: center;">
+                                    <form action="">
+                                        <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
+                                        <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
+                                        <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
+                                        <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
+                                        <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                        <!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="secure">
-        <table class="table table-hover table-dark">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Date & Time</th>
-                <th scope="col">Site</th>
-                <th scope="col">Inspector</th>
-                <th scope="col" class="text-center">Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($evaluations as $key => $eval): ?>
-                <tr>
-                    <?php if ($evaluations[$key]['type'] == 4): ?>
-                        <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
-                        <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
-                        <td><?= $eval['site_number'] ?></td>
-                        <td><?= $eval['firstname'] ?></td>
-                        <td>
-                            <form action="">
-                                <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
-                                <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
-                                <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
-                                <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
-<!--                                <a class="btn btn-success" href="http://gestionaht.ca/generate_pdf.php">Open PDF</a>-->
-<!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
-                            </form>
-                        </td>
-                    <?php endif; ?>
-                </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+        <div class="card-body instable">
+            <div class="table-responsive">
+                <table id="type-four" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($evaluations as $key => $eval): ?>
+                        <?php if ($evaluations[$key]['type'] == 4): ?>
+                            <tr>
+                                <th scope="row"><?= $eval['tbl_evaluation_id'] ?></th>
+                                <td><?= date("Y-m-d h:i:s a", $eval['tbl_evaluation_id']) ?></td>
+                                <td><?= $eval['site_number'] ?></td>
+                                <td><?= $eval['firstname'] ?></td>
+                                <td style="text-align: center;">
+                                    <form action="">
+                                        <input type="hidden" name="eval_id" value="<?= $eval['tbl_evaluation_id'] ?>">
+                                        <input type="hidden" name="types" value="<?= $evaluations[$key]['type'] ?>">
+                                        <input type="hidden" name="site" value="<?= $evaluations[$key]['site_number'] ?>">
+                                        <input type="hidden" name="inspector" value="<?= $evaluations[$key]['firstname'] ?>">
+                                        <input class="btn btn-primary editBtn" type="submit" name="open" value="Open">
+                                        <!--                                <a class="btn btn-success" href="pdf.php?eval_id=--><?//= $currID ?><!--">Open PDF</a>-->
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Date & Time</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Inspector</th>
+                        <th scope="col" class="text-center">Action</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -131,6 +131,10 @@
         font-size: 20px;
     }
 
+    .instable{
+        padding: 0;
+    }
+
 }
 
 @media only screen and (max-width: 1199px) {
