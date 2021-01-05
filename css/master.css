@@ -21,8 +21,9 @@ hr.hrs {
 }
 
 .containers {
+
     width: 1400px;
-    margin: auto!important;
+    margin: 50px auto!important;
     /* transition: margin-left .5s; */
 }
 
