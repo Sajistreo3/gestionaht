@@ -12,7 +12,7 @@ include 'sidenav.php';
         <form class="inspectios" id="marchand" action="core.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="type" value="3">
             <input type="hidden" name="evaluation" value="<?= time() ?>">
-            <input type="hidden" name="site">
+            <input type="hidden" name="site" value="<?= $_SESSION['site']['id']?>">
             <?php foreach ($quetions as $key => $quetion): ?>
                 <input type="hidden" name="question[]" value="<?= $quetion['question_number'] ?>">
                 <div class="questions">

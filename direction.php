@@ -24,7 +24,7 @@ include "header.php";
         width: 100%;
         height: 100%;
     }
-    div{
+     td div{
         width: 100%;
         height: 100%;
         text-align: center;
@@ -34,14 +34,14 @@ include "header.php";
 </style>
 <div class="containers" style="margin-left: 0;">
     <div class="home">
-        <h1 style="text-align: center;"> TEAM</h1>
+        <h1 style="text-align: center;">TEAM</h1>
         <hr style="border-top: 1px solid white;">
         <table>
             <tbody>
             <tr align="center">
                 <td valign="center">
                     <div>
-                        <img src="images/shajeed.png" alt="">
+                        <img src="https://www.xovi.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
                         <p>
                             <span>Mr. Singh</span><br>
                             President <br>
@@ -52,7 +52,7 @@ include "header.php";
                 </td>
                 <td>
                     <div>
-                        <img src="images/shajeed.png" alt="">
+                        <img src="https://www.xovi.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
                         <p>
                             <span>Mr. Singh</span><br>
                             President <br>
@@ -65,7 +65,7 @@ include "header.php";
             <tr>
                 <td>
                     <div>
-                        <img src="images/shajeed.png" alt="">
+                        <img src="https://www.xovi.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
                         <p>
                             <span>Mr. Singh</span><br>
                             President <br>
@@ -76,7 +76,7 @@ include "header.php";
                 </td>
                 <td>
                     <div>
-                        <img src="images/shajeed.png" alt="">
+                        <img src="https://www.xovi.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" alt="">
                         <p>
                             <span>Mr. Singh</span><br>
                             President <br>

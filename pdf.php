@@ -3,7 +3,7 @@ session_start();
 include "dbConnection.php";
 $query = $db->prepare("SELECT q.question_number, q.question,i.type, i.score, q.total_score,  i.comment, i.image, s.site_number, s.address, s.manager , u.firstname
 FROM tbl_inspection i
-JOIN tbl_questions q
+LEFT JOIN tbl_questions q
 ON q.question_number = i.question_number and q.type = i.type
 JOIN tbl_sites s
 ON s.id = i.tbl_sites_id 
@@ -180,7 +180,7 @@ foreach ($evaluation as $key) {
                     <?php endif; ?>
                 </p>
                 <div class="image">
-                    <img style="width: 100%" src="images/inspections/<?= $filename ?>" alt="image">
+                    <img style="width: 100%" src="images/inspections/<?= 'thumb_'.$filename ?>" alt="image">
                 </div>
     </div>
             <?php endforeach; ?>

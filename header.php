@@ -192,6 +192,7 @@ include "dbConnection.php";
         }
         a.active{
             background: #EE1123!important;
+            color: white!important;
         }
 
     </style>

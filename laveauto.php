@@ -11,7 +11,7 @@ $quetions = $db->query("SELECT * FROM tbl_questions WHERE type = '3';")->fetchAl
         <form class="inspectios" action="core.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="type" value="3">
             <input type="hidden" name="evaluation" value="<?= time() ?>">
-            <input type="hidden" name="site">
+            <input type="hidden" name="site" value="<?= $_SESSION['site']['id']?>">
             <?php foreach ($quetions as $keys => $quetion): ?>
                 <input type="hidden" name="question[]" value="<?= $quetion['question_number'] ?>">
                 <div class="questions">

@@ -18,13 +18,13 @@
                     <option value="<?= $site['site_number'] ?>"><?= "(" . $site['site_number'].") " .substr($site['address'],15,39) ?></option>
                 <?php endforeach; ?>
             </select>
-            <h2>Gerent :</h2>
-            <input type="hidden" value="" name="sitenum">
-            <input class="sidenavi" type="text" name="manager" value="" readonly>
-            <h2>Address :</h2>
-            <input class="sidenavi" type="text" name="address" value="" readonly>
+<!--            <h2>Gerent :</h2>-->
+<!--            <input type="hidden" value="" name="sitenum">-->
+<!--            <input class="sidenavi" type="text" name="manager" value="" readonly>-->
+<!--            <h2>Address :</h2>-->
+<!--            <input class="sidenavi" type="text" name="address" value="" readonly>-->
             <h2>Inspecté par :</h2>
-            <input class="sidenavi" type="text" name="inspectby" value="Martin Laporte" readonly>
+            <input class="sidenavi" type="text" name="inspectby" value="<?= $_SESSION['user']['firstname'] . " " . $_SESSION['user']['lastname'] ?>" readonly>
         </form>
         <script>
             $("#site").on("change", function(){
