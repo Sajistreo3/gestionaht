@@ -46,9 +46,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
     foreach ($_FILES as $key1 => $value1) {
         foreach ($value1 as $key2 => $value2) {
             foreach ($value2 as $key3 => $value3) {
-                if ($key2 == "tmp_name")
-                    if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
+                if ($key2 == "tmp_name") {
+                    if (!empty($value1['name'][$key3])) {
+                        $file = 'images/inspections/' . $value1['name'][$key3];
+                        move_uploaded_file($value3, $file);
+                        resizer($file, 'images/inspections/thumb_' . $value1['name'][$key3], 50, 60);
+                    }
+                }
             }
         }
     }
@@ -512,7 +516,6 @@ function resizer ($source, $destination, $size, $quality=null) {
     if (!in_array($ext, ["bmp", "gif", "jpg", "jpeg", "png", "webp"])) {
         throw new Exception('Invalid image file type');
     }
-
     // Source image not found!
     if (!file_exists($source)) {
         throw new Exception('Source image file not found');
@@ -555,13 +558,17 @@ function resizer ($source, $destination, $size, $quality=null) {
         $resized, $original, 0, 0, 0, 0,
         $new_width, $new_height, $width, $height
     );
-
     // (D) OUTPUT & CLEAN UP
+    $resized = imagerotate($resized, -90, 0);
+
     if (is_numeric($quality)) {
         $fnOutput($resized, $destination, $quality);
     } else {
         $fnOutput($resized, $destination);
     }
+
+
     imagedestroy($original);
     imagedestroy($resized);
+
 }

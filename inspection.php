@@ -294,7 +294,7 @@ foreach ($result as $quetion) {
 
         <?php if ($_GET['types'] == 1): ?>
             <p class="title">PROPERTE - <?= $currID ?></>
-                <h4 class="totalresult">Total Score : <?= $curScore ?> /73 </h4>
+                <h4 class="totalresult">Total Score : <?= $curScore ?> /104 </h4>
         <?php elseif ($_GET['types'] == 2): ?>
             <p class="title">MARCHENDISE - <?= $currID ?></p>
             <h4 class="totalresult">Total Score : <?= $curScore ?> /100 </h4>

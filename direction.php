@@ -3,7 +3,7 @@ include "header.php";
 ?>
 <style>
     div.home {
-        height: 1300px;
+        height: 1370px;
     }
 
     table, tr, td {
@@ -182,6 +182,7 @@ include "header.php";
                         <p class="title">CEO & Founder</p><br>
                         <!--                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>-->
                         <p><a href="mailto:example@example.com">example@example.com</a></p>
+                        <p><a href="tel:4387285533">(514) 123 1234</a></p>
                         <p>
                             <button class="button">Contact</button>
                         </p>
@@ -197,7 +198,8 @@ include "header.php";
                         <h2>Mike Ross</h2>
                         <p class="title">Art Director</p><br>
                         <!--                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>-->
-                        <p>example@example.com</p>
+                        <p><a href="mailto:example@example.com">example@example.com</a></p>
+                        <p><a href="tel:4387285533">(514) 123 1234</a></p>
                         <p>
                             <button class="button">Contact</button>
                         </p>
@@ -212,7 +214,8 @@ include "header.php";
                         <h2>John Doe</h2>
                         <p class="title">Designer</p><br>
                         <!--                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>-->
-                        <p>example@example.com</p>
+                        <p><a href="mailto:example@example.com">example@example.com</a></p>
+                        <p><a href="tel:4387285533">(514) 123 1234</a></p>
                         <p>
                             <button class="button">Contact</button>
                         </p>
@@ -235,7 +238,8 @@ include "header.php";
                         <h2>John Doe</h2>
                         <p class="title">Designer</p><br>
                         <!--                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>-->
-                        <p>example@example.com</p>
+                        <p><a href="mailto:example@example.com">example@example.com</a></p>
+                        <p><a href="tel:4387285533">(514) 123 1234</a></p>
                         <p>
                             <button class="button">Contact</button>
                         </p>

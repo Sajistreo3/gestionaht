@@ -18,9 +18,19 @@ foreach ($evaluation as $key) {
     $user = $key['firstname'];
     $manager = $key['manager'];
     $type = $key['type'];
+    if ($type == 1) {
+        $totalPer = 104;
+    } elseif ($type == 2) {
+        $totalPer = 100;
+    } elseif ($type == 3) {
+        $totalPer = 94;
+    } elseif ($type == 4) {
+        $totalPer = 100;
+    }
     $site = $key['site_number'];
     $address = $key['address'];
     $curScore = $curScore + $key['score'];
+    $curScorePer = $curScore/$totalPer*100;
 }
 //var_dump($evaluation);
 ?>
@@ -91,10 +101,12 @@ foreach ($evaluation as $key) {
         }
         header h4.eval-result{
             float: right;
-            <?php if ($curScore <= 50):?>
-                color: red;
-            <?php else:?>
+            <?php if ($curScorePer >= 95):?>
                 color: limegreen;
+            <?php elseif ($curScorePer < 95 && $curScorePer >= 90):?>
+                color: yellow;
+            <?php elseif ($curScorePer < 90):?>
+                color: red;
             <?php endif;?>
         }
 
@@ -126,7 +138,7 @@ foreach ($evaluation as $key) {
     </nav>
     <header>
         <h4 class="eval-type">Évaluation <?php  if ($type == 1){echo 'Propreté';} elseif ($type == 2) {echo 'Marchandise';} elseif ($type == 3) {echo 'Lave Auto';} elseif ($type == 4) {echo 'Securité';} ?></h4>
-        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '73';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo round($curScore/73*100, 1);} elseif ($type == 2) {echo round($curScore, 1);} elseif ($type == 3) {echo round($curScore/94*100, 1);} elseif ($type == 4) {echo round($curScore, 1);} ?>%)</h4>
+        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '104';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo round($curScore/73*100, 1);} elseif ($type == 2) {echo round($curScore, 1);} elseif ($type == 3) {echo round($curScore/94*100, 1);} elseif ($type == 4) {echo round($curScore, 1);} ?>%)</h4>
     </header>
     <hr>
     <div class="nav">
