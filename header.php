@@ -16,7 +16,8 @@ include "dbConnection.php";
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous"/>
+    <link href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous"/>
     <link href="plugins/lightbox2-2.11.1/src/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -25,6 +26,7 @@ include "dbConnection.php";
     <!-- Java script -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
@@ -33,6 +35,16 @@ include "dbConnection.php";
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <script src="plugins/lightbox2-2.11.1/src/js/lightbox.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#type-one').DataTable();
+            $('#type-two').DataTable();
+            $('#type-three').DataTable();
+            $('#type-four').DataTable();
+        } );
+    </script>
     <title>Gestion A.H.T</title>
 
     <style>
@@ -180,23 +192,24 @@ include "dbConnection.php";
         }
         a.active{
             background: #EE1123!important;
+            color: white!important;
         }
 
     </style>
 
 
     <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/5fcd95b2920fc91564ce13a6/default';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();-->
+<!--        (function(){-->
+<!--            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];-->
+<!--            s1.async=true;-->
+<!--            s1.src='https://embed.tawk.to/5fcd95b2920fc91564ce13a6/default';-->
+<!--            s1.charset='UTF-8';-->
+<!--            s1.setAttribute('crossorigin','*');-->
+<!--            s0.parentNode.insertBefore(s1,s0);-->
+<!--        })();-->
+<!--    </script>-->
     <!--End of Tawk.to Script-->
 
     <script>

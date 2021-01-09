@@ -18,7 +18,7 @@ if (isset($_POST["SignIn"])) {
             header("location: index.php");
             //var_dump($users);
             exit();
-        }else {
+        } else {
             $_SESSION['email'] = $users['email'];
             header("location: login.php?error=emailnotvalidated");
         }
@@ -46,9 +46,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
     foreach ($_FILES as $key1 => $value1) {
         foreach ($value1 as $key2 => $value2) {
             foreach ($value2 as $key3 => $value3) {
-                if ($key2 == "tmp_name")
-                    if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
+                if ($key2 == "tmp_name") {
+                    if (!empty($value1['name'][$key3])) {
+                        $file = 'images/inspections/' . $value1['name'][$key3];
+                        move_uploaded_file($value3, $file);
+                        resizer($file, 'images/inspections/thumb_' . $value1['name'][$key3], 50, 60);
+                    }
+                }
             }
         }
     }
@@ -84,9 +88,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
     foreach ($_FILES as $key1 => $value1) {
         foreach ($value1 as $key2 => $value2) {
             foreach ($value2 as $key3 => $value3) {
-                if ($key2 == "tmp_name")
-                    if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
+                if ($key2 == "tmp_name") {
+                    if (!empty($value1['name'][$key3])) {
+                        $file = 'images/inspections/' . $value1['name'][$key3];
+                        move_uploaded_file($value3, $file);
+                        resizer($file, 'images/inspections/thumb_' . $value1['name'][$key3], 50, 60);
+                    }
+                }
             }
         }
     }
@@ -120,9 +128,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
     foreach ($_FILES as $key1 => $value1) {
         foreach ($value1 as $key2 => $value2) {
             foreach ($value2 as $key3 => $value3) {
-                if ($key2 == "tmp_name")
-                    if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
+                if ($key2 == "tmp_name") {
+                    if (!empty($value1['name'][$key3])) {
+                        $file = 'images/inspections/' . $value1['name'][$key3];
+                        move_uploaded_file($value3, $file);
+                        resizer($file, 'images/inspections/thumb_' . $value1['name'][$key3], 50, 60);
+                    }
+                }
             }
         }
     }
@@ -156,9 +168,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'changeSite') {
     foreach ($_FILES as $key1 => $value1) {
         foreach ($value1 as $key2 => $value2) {
             foreach ($value2 as $key3 => $value3) {
-                if ($key2 == "tmp_name")
-                    if (!empty($value1['name'][$key3]))
-                        move_uploaded_file($value3, 'images/inspections/' . $value1['name'][$key3]);
+                if ($key2 == "tmp_name") {
+                    if (!empty($value1['name'][$key3])) {
+                        $file = 'images/inspections/' . $value1['name'][$key3];
+                        move_uploaded_file($value3, $file);
+                        resizer($file, 'images/inspections/thumb_' . $value1['name'][$key3], 50, 60);
+                    }
+                }
             }
         }
     }
@@ -278,26 +294,18 @@ if (isset($_POST["registers"])) {
             if ($_POST['password'] === $_POST['cpassword']) {
 
 
-
-
-
                 if (isset($_SESSION['user']) && $_SESSION['user']['level'] <= 2) {
                     $query = $db->prepare("INSERT INTO tbl_users (`firstname`,`lastname`, `email` ,`username`, `password`, `level`, `valid` ,`status`) VALUES(:firstname,:lastname, :email ,:username, :password, :level, DEFAULT, DEFAULT)");
-                    $query->execute(array("firstname" => $_POST['firstname'], "lastname" => $_POST['lastname'],"email" => $_POST['email'] ,"username" => strtolower($_POST['username']), "password" => md5($_POST['password']), "level" => $_POST['level']));
+                    $query->execute(array("firstname" => $_POST['firstname'], "lastname" => $_POST['lastname'], "email" => $_POST['email'], "username" => strtolower($_POST['username']), "password" => md5($_POST['password']), "level" => $_POST['level']));
                     // header("location: index.php?success=created");
                     echo "You have been fucked succcessssfuuuulllllyyyy";
                 } else {
                     $query = $db->prepare("INSERT INTO tbl_users (`firstname`,`lastname`, `email`,`username`, `password`, `level`, `valid`,`status`) VALUES(:firstname,:lastname , :email ,:username, :password, :level, DEFAULT, DEFAULT)");
-                    $query->execute(array("firstname" => $_POST['firstname'], "lastname" => $_POST['lastname'],"email" => $_POST['email'] , "username" => strtolower($_POST['username']), "password" => md5($_POST['password']), "level" => '7'));
+                    $query->execute(array("firstname" => $_POST['firstname'], "lastname" => $_POST['lastname'], "email" => $_POST['email'], "username" => strtolower($_POST['username']), "password" => md5($_POST['password']), "level" => '7'));
                     // header("location: index.php?success=created");
                     echo "WELCOME NEW CUSTOMER ";
                     header("location: index.php?success=checkemail");
                 }
-
-
-
-
-
 
 
                 //Register Data into Database
@@ -351,7 +359,7 @@ if (isset($_POST["registers"])) {
                     }
                     header("location: login.php?success=created");
                     unset($_SESSION['username']);
-                }else{
+                } else {
                     header("location: login.php?error=notcreated");
                     unset($_SESSION['username']);
                 }
@@ -367,7 +375,7 @@ if (isset($_POST["registers"])) {
 }
 
 
-if (isset($_GET['user']) and $_GET['user'] == "retryvalidation"){
+if (isset($_GET['user']) and $_GET['user'] == "retryvalidation") {
     var_dump($_SESSION['email']);
     $to = $_SESSION['email'];
     $query = $db->prepare("SELECT * FROM tbl_users WHERE email = :email;");
@@ -396,7 +404,7 @@ if (isset($_GET['user']) and $_GET['user'] == "retryvalidation"){
           <title>Document</title>
         </head>
         <body>
-          <h1>Hello  '.$userid['username'].'</h1>
+          <h1>Hello  ' . $userid['username'] . '</h1>
           <p>Please validate your account to continue by <a href="http://localhost/Gestion_AHT/core.php?user=' . encrypt($userid['id']) . '">clicking here</a></p>
           <p>Regards, SysAdmin</p>
         </body>
@@ -416,16 +424,14 @@ if (isset($_GET['user']) and $_GET['user'] == "retryvalidation"){
         unset($_SESSION['user']);
         echo "email sent";
         header("location: login.php?success=email_sent");
-    }
-    else {
+    } else {
         header("location: login.php?error=notcreated");
         unset($_SESSION['username']);
         unset($_SESSION['email']);
         unset($_SESSION['user']);
     }
 
-}
-else if (isset($_GET['user'])) {
+} else if (isset($_GET['user'])) {
     $query = $db->prepare("UPDATE tbl_users SET valid = '1' WHERE id = :id;");
     $query->execute(array(
             "id" => decrypt($_GET['user']),
@@ -433,7 +439,7 @@ else if (isset($_GET['user'])) {
     );
     var_dump(decrypt($_GET['user']));
     var_dump($_GET['user']);
-    echo "email validated ".decrypt($_GET['user']);
+    echo "email validated " . decrypt($_GET['user']);
     header("location: login.php?success=emailvalidated");
 
 }
@@ -474,7 +480,8 @@ if (isset($_POST['changePass'])) {
 }
 
 
-function encrypt($str){
+function encrypt($str)
+{
     $enc = str_rot13($str);
     $enc = base64_encode($enc);
     $enc = "G8T2" . $enc . "LG8B4T";
@@ -484,7 +491,8 @@ function encrypt($str){
     return $enc;
 }
 
-function decrypt($str){
+function decrypt($str)
+{
     $enc = str_rot13($str);
     $enc = strrev($enc);
     $enc = str_replace(array("G8T2", "LG8B4T"), array("", ""), $enc);
@@ -492,4 +500,75 @@ function decrypt($str){
     $enc = str_rot13($enc);
 
     return $enc;
+}
+
+
+function resizer ($source, $destination, $size, $quality=null) {
+// $source - Original image file
+// $destination - Resized image file name
+// $size - Single number for percentage resize
+// Array of 2 numbers for fixed width + height
+// $quality - Optional image quality. JPG & WEBP = 0 to 100, PNG = -1 to 9
+
+    // (A) FILE CHECKS
+    // Allowed image file extensions
+    $ext = strtolower(pathinfo($source)['extension']);
+    if (!in_array($ext, ["bmp", "gif", "jpg", "jpeg", "png", "webp"])) {
+        throw new Exception('Invalid image file type');
+    }
+    // Source image not found!
+    if (!file_exists($source)) {
+        throw new Exception('Source image file not found');
+    }
+
+    // (B) IMAGE DIMENSIONS
+    $dimensions = getimagesize($source);
+    $width = $dimensions[0];
+    $height = $dimensions[1];
+
+    if (is_array($size)) {
+        $new_width = $size[0];
+        $new_height = $size[1];
+    } else {
+        $new_width = ceil(($size/100) * $width);
+        $new_height = ceil(($size/100) * $height);
+    }
+
+    // (C) RESIZE
+    // Respective PHP image functions
+    $fnCreate = "imagecreatefrom" . ($ext=="jpg" ? "jpeg" : $ext);
+    $fnOutput = "image" . ($ext=="jpg" ? "jpeg" : $ext);
+
+    // Image objects
+    $original = $fnCreate($source);
+    $resized = imagecreatetruecolor($new_width, $new_height);
+
+    // Transparent images only
+    if ($ext=="png" || $ext=="gif") {
+        imagealphablending($resized, false);
+        imagesavealpha($resized, true);
+        imagefilledrectangle(
+            $resized, 0, 0, $new_width, $new_height,
+            imagecolorallocatealpha($resized, 255, 255, 255, 127)
+        );
+    }
+
+    // Copy & resize
+    imagecopyresampled(
+        $resized, $original, 0, 0, 0, 0,
+        $new_width, $new_height, $width, $height
+    );
+    // (D) OUTPUT & CLEAN UP
+    $resized = imagerotate($resized, -90, 0);
+
+    if (is_numeric($quality)) {
+        $fnOutput($resized, $destination, $quality);
+    } else {
+        $fnOutput($resized, $destination);
+    }
+
+
+    imagedestroy($original);
+    imagedestroy($resized);
+
 }

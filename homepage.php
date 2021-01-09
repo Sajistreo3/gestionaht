@@ -45,7 +45,7 @@
         color: #9E0B17;
     }
 
-    ol.carousel-indicators li{
+    ol.carousel-indicators li {
         background-color: #EE1123;
     }
 

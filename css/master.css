@@ -21,8 +21,9 @@ hr.hrs {
 }
 
 .containers {
+
     width: 1400px;
-    margin: auto!important;
+    margin: 50px auto!important;
     /* transition: margin-left .5s; */
 }
 
@@ -385,6 +386,7 @@ div.questions p.total {
 div.questions div.rselect {
     margin-right: 100px;
     float: right;
+
 }
 
 div.questions p.comment {
@@ -424,7 +426,7 @@ footer p {
 }
 
 .active {
-    background-color: #B44B35;
+    background-color: #343A40;
 }
 
 .register select.level {
@@ -700,3 +702,47 @@ p.address{
 
   text-align: left;
 }*/
+
+
+.table {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.page-link {
+    color: #EE1123;
+    border: 1px solid #F7959D;
+    transition: 0.2s;
+}
+
+.page-link:hover {
+    color: #9E0B17;
+    border: 1px solid #F7959D;
+    background-color: #F7959D;
+}
+
+.page-item.active .page-link {
+    background-color: #EE1123;
+    border-color: #F3606C;
+}
+
+.dataTables_info {
+    color: white;
+}
+
+.table thead th {
+    border: 1px solid #454D55;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #83888D;
+}
+
+
+.nav-link.active.show {
+    color: white;
+}
+
