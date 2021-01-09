@@ -188,11 +188,11 @@
         </div>
         <br>
         <p>
-            Nous offrirons un charité rapide, agréable et prévenant grâce à que nos invités se sentent appréciés
+            Nous offrons un service rapide, accueillant et satisfaisant à fin que nos invités se sentent considérés.
         </p>
         <p>
             Toujours sur votre route.
-            Visitez un établissement Petro‑CanadaMC pour faire le plein. Certains établissements offrent du carburant de remplacement, le remplissage de bouteille de propane et un lave-auto.
+            Visitez un établissement Petro‑CanadaMC pour faire le plein. Certains établissements offrent une variété de carburant, le remplissage de bouteille de propane et un lave-auto.
         </p>
         <br>
         <div class="cert">

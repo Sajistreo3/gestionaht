@@ -108,12 +108,12 @@ p
             <br>
             <h3>MOT DE LA DIRECTION</h3>
             <p>
-                Bienvenue dans la grande famille du Réseau. Nous sommes fiers de notre réussite et nous comptons vous transmettre notre enthousiasme<br> lors de chacune de vos visites à nos établissements.
+                Bienvenue dans la grande famille du GestionAHT. Nous sommes fiers de notre réussite et nous comptons vous transmettre notre enthousiasme<br> lors de chacune de vos visites à nos établissements.
 
                 Toute notre équipe s’efforce à satisfaire chacun de nos clients afin que ceux-ci se sentent <br> plutôt comme des invités et non seulement comme de simples clients. Nous avons tous le même objectif :<br><br>
                <b> « Offrir un service rapide, courtois et attentionné afin que nos invités se sentent appréciés »</b><br><br>
                 Fort de notre expérience de près de 30 ans dans le monde de l’alimentation de petites surfaces et des postes d’essence, nous sommes très <br>heureux de pouvoir compter sur une équipe dynamique, positive, expérimentée et passionnée.
-                Toute l’équipe se joint à moi afin de vous <br>remercier pour votre confiance et nous espérons pouvoir vous compter parmi les amis fidèles de la grande famille du Réseau.<br>
+                Toute l’équipe se joint à moi afin de vous <br>remercier pour votre confiance et nous espérons pouvoir vous compter parmi les amis fidèles de la grande famille du GestionAHT.<br>
                 <br>
                 Mr.Singh <br> GestionAHT <br> Petro Canada
             </p><br>
