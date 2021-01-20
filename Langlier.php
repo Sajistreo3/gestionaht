@@ -86,7 +86,7 @@ include "header.php";
                 Phone Number : +1(514) 327-8720
             </p>
             <p>
-                Manager : <a href="team.php">Djenny</a>
+                Manager : <a href="gestion_team.php">Djenny</a>
             </p>
         </div>
         <div class="services">

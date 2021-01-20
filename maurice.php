@@ -115,7 +115,7 @@ include "header.php";
                 Phone Number : +15146431811
             </p>
             <p>
-                Manager : <a href="team.php">France</a>
+                Manager : <a href="gestion_team.php">France</a>
             </p>
         </div>
         <div class="services">

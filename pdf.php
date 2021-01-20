@@ -138,22 +138,22 @@ foreach ($evaluation as $key) {
     </nav>
     <header>
         <h4 class="eval-type">Évaluation <?php  if ($type == 1){echo 'Propreté';} elseif ($type == 2) {echo 'Marchandise';} elseif ($type == 3) {echo 'Lave Auto';} elseif ($type == 4) {echo 'Securité';} ?></h4>
-        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '104';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo round($curScore/73*100, 1);} elseif ($type == 2) {echo round($curScore, 1);} elseif ($type == 3) {echo round($curScore/94*100, 1);} elseif ($type == 4) {echo round($curScore, 1);} ?>%)</h4>
+        <h4 class="eval-result"><?= $curScore ?>/<?php  if ($type == 1){echo '104';} elseif ($type == 2) {echo '100';} elseif ($type == 3) {echo '94';} elseif ($type == 4) {echo '100';} ?> (<?php  if ($type == 1){echo round($curScore/104*100, 1);} elseif ($type == 2) {echo round($curScore, 1);} elseif ($type == 3) {echo round($curScore/94*100, 1);} elseif ($type == 4) {echo round($curScore, 1);} ?>%)</h4>
     </header>
     <hr>
     <div class="nav">
         <p>
             <b>Site</b><br>
-            <?= $site ?> (MTL)
+            <?= $site ?>
         </p>
         <p>
             <b>Gérant</b><br>
             <?= $manager ?>
         </p>
-        <p>
-            <b>Température</b><br>
-            <?= $address ?>
-        </p>
+<!--        <p>-->
+<!--            <b>Température</b><br>-->
+<!--            --><?//= $address ?>
+<!--        </p>-->
         <p>
             <b>Inspecté par</b><br>
             <?= $user ?>

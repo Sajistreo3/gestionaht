@@ -3,21 +3,21 @@ include "header.php";
 ?>
 
     <style>
-        div.home{
+        div.home {
             height: 1600px;
         }
-h3
-{
-    text-align: center;
-}
-p
-{
-    font-size: 18px;
-}
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+        }
 
         @media only screen and (max-width: 430px) {
 
-            div.home{
+            div.home {
                 height: 2000px;
             }
 
@@ -25,17 +25,15 @@ p
                 width: 263px;
             }
 
-            div.services{
+            div.services {
                 margin-top: 70px;
             }
 
-            div.services img{
+            div.services img {
                 display: block;
                 margin: 0 auto 60px;
                 width: 60%;
             }
-
-
 
 
         }
@@ -43,7 +41,7 @@ p
 
         @media only screen and (max-width: 550px) {
 
-            div.home{
+            div.home {
                 height: 2150px;
             }
 
@@ -51,17 +49,15 @@ p
                 width: 263px;
             }
 
-            div.services{
+            div.services {
                 margin-top: 70px;
             }
 
-            div.services img{
+            div.services img {
                 display: block;
                 margin: 0 auto 60px;
                 width: 60%;
             }
-
-
 
 
         }
@@ -71,7 +67,11 @@ p
 
     <div class="containers" style="margin-left: 0;">
         <div class="home">
-            <h1 style="text-align: center;"><?php if ($page == 'index') {echo 'ACCUEIL';} else {echo 'A PROPOS';}  ?></h1>
+            <h1 style="text-align: center;"><?php if ($page == 'index') {
+                    echo 'ACCUEIL';
+                } else {
+                    echo 'A PROPOS';
+                } ?></h1>
             <hr style="border-top: 1px solid white;">
             <div class="slider">
 
@@ -108,14 +108,25 @@ p
             <br>
             <h3>MOT DE LA DIRECTION</h3>
             <p>
-                Bienvenue dans la grande famille du Réseau. Nous sommes fiers de notre réussite et nous comptons vous transmettre notre enthousiasme<br> lors de chacune de vos visites à nos établissements.
-
-                Toute notre équipe s’efforce à satisfaire chacun de nos clients afin que ceux-ci se sentent <br> plutôt comme des invités et non seulement comme de simples clients. Nous avons tous le même objectif :<br><br>
-               <b> « Offrir un service rapide, courtois et attentionné afin que nos invités se sentent appréciés »</b><br><br>
-                Fort de notre expérience de près de 30 ans dans le monde de l’alimentation de petites surfaces et des postes d’essence, nous sommes très <br>heureux de pouvoir compter sur une équipe dynamique, positive, expérimentée et passionnée.
-                Toute l’équipe se joint à moi afin de vous <br>remercier pour votre confiance et nous espérons pouvoir vous compter parmi les amis fidèles de la grande famille du Réseau.<br>
-                <br>
-                Mr.Singh <br> GestionAHT <br> Petro Canada
+                Bienvenue dans la grande famille du GestionAHT. Notre but est de vous fournir la meilleure expérience
+                lors de vos visites dans nos établissements :
+            </p>
+            <ul style="font-size: 18px; color: #c8c8c8; font-family: 'Cairo', sans-serif;">
+                <li>Nous offrons des services qui facilitent votre mobilité : essence, lava auto, aspirateur, pompe à
+                    air, etc.
+                </li>
+                <li>Nous offrons de nombreux avantages grâce à nos cartes de fidélité.</li>
+            </ul>
+            <p>
+            Nous sommes une équipe dynamique, enthousiaste, expérimentée, à l’écoute et nous nous offrons d’offrir un
+            service de haute qualité en tout temps afin de garantir la satisfaction de nos invités.
+            <br><br>
+            Dans la grande famille du GestionAHT, nos invités découvrent une nouvelle vision de la performance dans leur
+            quotidien.
+            <br><br>
+            Nous vous remercions pour votre confiance et nous espérons pouvoir vous compter parmi nos amis fidèles.
+                <br><br>
+            Mr.Singh <br> GestionAHT <br> Petro Canada
             </p><br>
             <h3>NOS SERVICES</h3><br>
             <div class="services">
